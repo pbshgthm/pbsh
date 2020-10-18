@@ -1,18 +1,17 @@
-import ProjectPage from '../../components/ProjectPage'
-export default ProjectPage;
-
-export const metaData = {
-  slug			:  "vangogh",
-  title			:  "Vangogh - Search Engine",
-  subtitle	:  "designing and building a search engine for color palettes"
-}
-
-<!--///  BEGIN MDX  ///-->
+---
+title: 'Vangogh'
+desc: 'Color Palette'
+next: ['vangogh','duomoji']
+---
 
 # Vangogh
+
+
+
 ## SUB
 
 this is a paragraph
+<High>{title}</High>
 
 ![1096331](assets/vangogh/1096331.jpg#large)
 

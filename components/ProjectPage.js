@@ -1,14 +1,14 @@
-import {ProjectComp} from './ProjectComp'
-import {MDXProvider} from '@mdx-js/react'
-import styles from './ProjectComp.module.css'
+import styles from '../styles/Project.module.css'
 
-export default function ProjectPage({children,metaData}){
+export default function ProjectPage({children,meta}){
 	return(
-		<MDXProvider components={ProjectComp}>
 			<div className={styles.ProjectPage}>
-				{metaData.title}
+				{
+					"title : "+meta.title+
+					" | desc : "+meta.desc+
+					" | next : "+meta.next.join(',')
+				}
 				{children}
 			</div>
-		</MDXProvider>
 	)
 }
