@@ -24,7 +24,7 @@ const Img=(props)=>{
 			/>
 			<img
         className={styles.imgNormal}
-        src={require(`../content/works/${srcStr[0]}`)}
+        src={require(`../content/works/${srcStr[0]}?lqip`)}
         alt={props.alt}
         onLoad={() => setImageLoaded(true)}
       />
