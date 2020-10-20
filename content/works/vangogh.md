@@ -4,6 +4,8 @@ desc: 'Color Palette'
 next: ['vangogh','duomoji']
 ---
 
+
+
 # Vangogh
 
 
@@ -13,5 +15,7 @@ next: ['vangogh','duomoji']
 this is a paragraph
 <High>{title}</High>
 
-![1096331](assets/vangogh/1096331.jpg#large)
+this is nice
+![mandalorian](assets/vangogh/1096331.jpg#large)
+applelkkkk
 

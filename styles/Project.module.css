@@ -3,6 +3,18 @@
 	margin: auto;
 	margin-top: 50px;
 }
+
 .imgNormal{
 	width: 700px;
+	position: absolute;
+	transition: 10s;
+}
+
+.imgContainer{
+	width: 700px;
+	overflow: hidden;
+}
+
+.High{
+	background-color: yellow;
 }
