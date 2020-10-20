@@ -6,17 +6,25 @@
 
 .imgNormal{
 	width: 700px;
+	top: 0px;
+	position: absolute;
 }
+
 .lqipNormal{
 	width: 700px;
-	position: absolute;
 	transition: 2s;
+	display: block;
+	z-index: 2;
+	position: absolute;
 }
 
 .imgContainer{
 	width: 700px;
-	overflow: hidden;
+	height: auto;
 	position: relative;
+	margin-top:10px;
+	margin-bottom:10px;
+	display: block;
 }
 
 .High{
