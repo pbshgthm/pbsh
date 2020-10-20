@@ -9,6 +9,7 @@
 }
 .lqipNormal{
 	width: 700px;
+	position: absolute;
 	transition: 2s;
 }
 
@@ -16,7 +17,6 @@
 	width: 700px;
 	overflow: hidden;
 	position: relative;
-	height: auto;
 }
 
 .High{

@@ -9,14 +9,14 @@ const Img=(props)=>{
 			<img 
 				className={styles.lqipNormal}
 				src={require(`../content/works/${srcStr[0]}?lqip`)} 
-				alt={props.alt}	
-				style={{opacity:(imageLoaded?"1":"1")}}
+				style={{opacity:(imageLoaded?"0.3":"0.7")}}
+				onLoad={() => console.log('lo')}
 			/>
 			<img
         className={styles.imgNormal}
         src={require(`../content/works/${srcStr[0]}`)}
         alt={props.alt}
-        onLoad={() => setImageLoaded(true)}
+				onLoad={() => {console.log('loaded');setImageLoaded(true)}}
       />
 		</div>
 	)
