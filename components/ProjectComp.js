@@ -3,15 +3,6 @@ import {useState,useEffect} from 'react'
 const Img=(props)=>{
 	const [imageLoaded, setImageLoaded] = useState(false);
 	
-	const sty = {
-    lqip: {
-      filter: "blur(20px)",
-    },
-  };
-
-	if (imageLoaded) {
-    sty.lqip.opacity = 0;
-  }
 	
 	const srcStr=props.src.split('#')
 	return(
@@ -20,7 +11,7 @@ const Img=(props)=>{
 				className={styles.lqipNormal}
 				src={require(`../content/works/${srcStr[0]}?lqip`)} 
 				alt={props.alt}	
-				style={sty.lqip}
+				style={{opacity:(imageLoaded?"0":"1")}}
 			/>
 			<img
         className={styles.imgNormal}
