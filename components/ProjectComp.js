@@ -6,7 +6,6 @@ const Img=(props)=>{
 	const sty = {
     lqip: {
       filter: "blur(20px)",
-			transition: "20s"
     },
   };
 
@@ -18,7 +17,7 @@ const Img=(props)=>{
 	return(
 		<div className={styles.imgContainer}>
 			<img 
-				className={styles.imgNormal}
+				className={styles.lqipNormal}
 				src={require(`../content/works/${srcStr[0]}?lqip`)} 
 				alt={props.alt}	
 				style={sty.lqip}
