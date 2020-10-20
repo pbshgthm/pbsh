@@ -7,15 +7,15 @@
 .imgNormal{
 	width: 700px;
 	top: 0px;
-	transform: blur(20px);
 }
 
 .lqipNormal{
 	width: 700px;
 	transition: 1s;
 	display: block;
-	z-index: 2;
-	position: absolute;
+	position: relative;
+	opacity: 0;
+	filter: blur(10px);
 }
 
 .imgContainer{
@@ -24,6 +24,8 @@
 	position: relative;
 	display: block;
 	overflow: hidden;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .High{

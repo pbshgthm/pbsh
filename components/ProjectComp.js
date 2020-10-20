@@ -2,12 +2,12 @@ import styles from '../styles/Project.module.css'
 import {useState,useEffect} from 'react'
 const Img=(props)=>{
 	const [imageLoaded, setImageLoaded] = useState(false);
-	const [removeLqip,setRemoveLqip] = useState(false);
+	const [removeLqip,setRemoveLqip] = useState(true);
 
 	useEffect(() => {
 		if(imageLoaded){
 			setTimeout(() => {
-				setRemoveLqip(true)
+				setRemoveLqip(false)
 			}, 2000);
 		}
 	}, [imageLoaded])
@@ -15,23 +15,22 @@ const Img=(props)=>{
 	const srcStr=props.src.split('#')
 	return(
 		<div className={styles.imgContainer}>
-			<img 
+			{removeLqip&&<img 
 				className={styles.lqipNormal}
 				src={require(`../content/works/${srcStr[0]}?lqip`)} 
-				style={{opacity:(imageLoaded?"0":"1"),zIndex:'4',transform:'scale(1.1)',display:removeLqip?'none':'block'}}
-			/>
-			<img 
+				style={{opacity:(imageLoaded?"0":"1"),position:'absolute',zIndex:'4',transform:'scale(1.1)'}}
+			/>}
+			{removeLqip&&<img 
 				className={styles.lqipNormal}
 				src={require(`../content/works/${srcStr[0]}?lqip`)} 
-				style={{opacity:'0',position:'relative',display:removeLqip?'none':'block'}}
-			/>
-			{<img
+			/>}
+			<img
         className={styles.imgNormal}
         src={require(`../content/works/${srcStr[0]}`)}
         alt={props.alt}
-				style={{position:removeLqip?'relative':'absolute'}}
+				style={{position:removeLqip?'absolute':'relative'}}
 				onLoad={() => {console.log('loaded');setImageLoaded(true)}}
-      />}
+      />
 		</div>
 	)
 }
