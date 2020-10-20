@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from 'next/link'
 import {useState} from 'react'
 
-import styles from "../styles/header.module.css"
+import styles from "../styles/Header.module.css"
 
 
 export default function Header(props){
