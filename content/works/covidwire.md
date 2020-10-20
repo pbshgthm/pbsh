@@ -12,7 +12,6 @@ This is what we did
 - Somethine else
 - This too
 
-<High>OOOOOOOOOOOO</High>
 
 dsdsds
 
