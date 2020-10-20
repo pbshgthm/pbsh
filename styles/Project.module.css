@@ -7,12 +7,12 @@
 .imgNormal{
 	width: 700px;
 	top: 0px;
-	position: absolute;
+	transform: blur(20px);
 }
 
 .lqipNormal{
 	width: 700px;
-	transition: 2s;
+	transition: 1s;
 	display: block;
 	z-index: 2;
 	position: absolute;
@@ -22,9 +22,8 @@
 	width: 700px;
 	height: auto;
 	position: relative;
-	margin-top:10px;
-	margin-bottom:10px;
 	display: block;
+	overflow: hidden;
 }
 
 .High{
