@@ -6,14 +6,22 @@ import {join} from 'path'
 import {ProjectComp} from '../../components/ProjectComp'
 import ProjectPage from '../../components/ProjectPage'
 
+import Header from '../../components/Header'
+import Layout from '../../components/Layout'
+
 const components = ProjectComp;
 
 
 export default function Works({ source, frontMatter }){
 	
 	const content = hydrate(source, { components })
-  return <ProjectPage meta={frontMatter}>{content}</ProjectPage>
-	
+
+  return(
+		<Layout title={frontMatter.title}>
+			<Header navLink='work'/>
+			<ProjectPage meta={frontMatter}>{content}</ProjectPage>
+		</Layout>
+	)
 }
 
 export async function getStaticProps({params}) {

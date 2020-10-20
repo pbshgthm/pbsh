@@ -1,0 +1,44 @@
+.Header{
+	width: 100vw;
+	position: fixed;
+	background: #ffffff;
+	box-shadow: 0px 1px 4px rgba(188, 188, 188, 0.25);
+	height: 55px;
+	top: 0px;
+	z-index: 3;
+}
+.Content{
+	width: 1000px;
+	margin: auto;
+	padding-top: 5px;
+}
+.Logo{
+	float: left;
+	height: 45px;
+}
+.NavList{
+	float: right;
+}
+.NavLink{
+	font-family: 'Raleway', sans-serif;
+	display: inline-block;
+	color: #9A9A9A;
+	width: 70px;
+	font-size: 18px;
+	line-height: 45px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+.NavLink:hover{
+	color: #656565;
+}
+.NavLinkSel{
+	color: #656565;
+}
+.NavSelbar{
+	width: 70px;
+	height: 5px;
+	background-color: #FFB864;
+	transition: 0s
+}
