@@ -97,7 +97,7 @@
 	width: 1000px;
 	transition: 1s;
 	display: block;
-	position: relative!important;
+	position: relative;
 	opacity: 0;
 }
 

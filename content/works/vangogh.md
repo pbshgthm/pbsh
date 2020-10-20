@@ -11,7 +11,7 @@ next: ['vangogh','duomoji']
 
 
 <InfoBox>
-	<InfoTitle>🚀  My Role️</InfoTitle>
+	<InfoTitle>🚀  My Role</InfoTitle>
 	<InfoDesc>
 		Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black.
 	</InfoDesc>
