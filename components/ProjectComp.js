@@ -3,7 +3,6 @@ import {useState,useEffect} from 'react'
 const Img=(props)=>{
 	const [imageLoaded, setImageLoaded] = useState(false);
 	
-	
 	const srcStr=props.src.split('#')
 	return(
 		<div className={styles.imgContainer}>
@@ -11,7 +10,7 @@ const Img=(props)=>{
 				className={styles.lqipNormal}
 				src={require(`../content/works/${srcStr[0]}?lqip`)} 
 				alt={props.alt}	
-				style={{opacity:(imageLoaded?"0":"1")}}
+				style={{opacity:(imageLoaded?"1":"1")}}
 			/>
 			<img
         className={styles.imgNormal}

@@ -9,9 +9,7 @@
 }
 .lqipNormal{
 	width: 700px;
-	position: absolute;
 	transition: 2s;
-	filter: blur(20px);
 }
 
 .imgContainer{

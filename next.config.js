@@ -8,7 +8,8 @@ const withMDX = require("@next/mdx")({
 
 module.exports = withPlugins([
 	[optimizedImages, {
-		optimizeImages: false
+		optimizeImages: false,
+		optimizeImagesInDev: true
   }],
   [withMDX, {
 	  pageExtensions: ["js", "jsx", "md", "mdx"]
