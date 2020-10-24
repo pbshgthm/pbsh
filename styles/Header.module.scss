@@ -1,3 +1,5 @@
+@use "base" as *;
+
 .Header{
 	width: 100vw;
 	position: fixed;
@@ -20,9 +22,9 @@
 	float: right;
 }
 .NavLink{
-	font-family: 'Raleway', sans-serif;
+	font-family: $secondary-font;
 	display: inline-block;
-	color: #9A9A9A;
+	color: $gray-dark;
 	width: 70px;
 	font-size: 18px;
 	line-height: 45px;
@@ -31,14 +33,14 @@
 	text-decoration: none;
 }
 .NavLink:hover{
-	color: #656565;
+	color: $gray-mid;
 }
 .NavLinkSel{
-	color: #656565;
+	color: $gray-mid;
 }
 .NavSelbar{
 	width: 70px;
 	height: 5px;
-	background-color: #FFB864;
+	background-color: $accent-light;
 	transition: 0s
 }
