@@ -1,0 +1,272 @@
+@use "base" as *;
+
+.Cover{
+	margin-top: 55px;
+	width: 100vw;
+
+	img{
+		top: 0px;
+		width: 100%;
+	}
+
+}
+
+.Intro{
+
+	width: 1000px;
+	margin: auto;
+
+	.Crumb{
+		font-family: $secondary-font;
+		color: $gray-light;
+		font-size: 18px;
+		font-weight: 500;
+		margin-top: 30px;
+	}
+
+	h1{
+		color: $gray-darker;
+		font-family: $primary-font;
+		font-weight: normal;
+		font-size: 72px;
+		margin-top: 12px;
+		margin-bottom: 0px;
+	}
+
+	h2{
+		font-family: $secondary-font;
+		color: $gray-light;
+		font-size: 36px;
+		font-weight: normal;
+		margin-top: 36px;
+	}
+
+	.Info{
+		font-family: $secondary-font;
+		font-size: 18px;
+		width: 875px;
+		display: flex;
+		margin-top: 70px;
+		color: $gray-light;
+		font-weight: 500;
+	}
+	
+	.Domain{
+		color: $gray-darker;
+		font-weight: 700;
+		
+		span{
+			margin-right: 10px;
+		}
+		span:not(:last-of-type)::after{
+			content: '|';
+			margin-left: 10px;
+		}
+
+	}
+
+	span{
+		margin-left: auto;
+	}
+	
+}
+
+.Break {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 10px;
+	background-repeat: no-repeat;
+  background-image: url('/images/wave.svg')
+}
+
+.Body{
+	width: 750px;
+	margin: auto;
+	margin-bottom: 100px;
+	
+	.Summary{
+		.SummaryCol{
+			margin-top: 40px;
+			margin-bottom: 40px;
+			width:325px;
+			display: inline-block;
+			vertical-align: top;
+			padding-right: 50px;
+			font-size: 18px;
+			color: $gray-darker;
+		}
+		h4{
+			font-family: $secondary-font;
+			margin-bottom: 0px;
+			margin-top: 30px;
+		}
+		p{
+			margin-top: 10px;
+			font-family: $primary-font;
+		}
+	}
+
+	h1{
+		color: $gray-darker;
+		font-family: $secondary-font;
+		font-size: 36px;
+		font-weight: 600;
+		padding-left: 10px;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		border-left: 5px $accent-light solid;
+	}
+
+	h2{
+		font-family: $secondary-font;
+		color: $gray-dark;
+		font-size: 24px;
+		font-weight: 700;
+		margin-top: 50px;
+	}
+
+	h3{
+		font-family: $primary-font;
+		color: $gray-light;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
+		font-style: italic;
+	}
+
+	h5{
+		background-color: $gray-lighter;
+		padding: 10px;
+		border-radius: 5px;
+		font-weight: normal;
+		text-align: center;
+		font-family: $primary-font;
+		font-size: 18px;
+		color: $gray-mid;
+	}
+
+	blockquote{
+		color: $accent-dark;
+		font-family: $secondary-font;
+		margin-left: 0px;
+		font-size: 20px;
+		padding-left:15px;
+		font-style: oblique;
+		line-height: 150%;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		border-left: 5px $accent-light solid;
+
+	}
+
+	p{
+		margin-top: 10px;
+		font-family: $primary-font;
+		color: $gray-dark;
+		font-size: 20px;
+	}
+
+	img{
+		top: 0px;
+		width: 100%;
+	}
+	
+	a{
+		color: #007ED9;
+		text-decoration: none;
+	}
+
+	a:hover{
+		text-decoration: underline;
+	}
+
+	ol{
+			color: $gray-dark;
+			font-family: $primary-font;
+			font-size: 20px;
+			font-weight: normal;
+			margin-bottom: 30px;
+			li{
+				margin-bottom: 12px;
+			}
+	}
+
+	ul{
+		color: $gray-dark;
+		font-family: $primary-font;
+		font-size: 20px;
+		font-weight: normal;
+		margin-bottom: 30px;
+		padding-left: 15px;
+		list-style: none;
+			li{
+				margin-bottom: 6px;
+			}
+			li::before{
+				content: '\2022';
+				color: $accent-light;
+				font-size: 26px;
+				margin-right: 10px;
+			}
+	}
+
+	em{
+		color: $gray-light;
+		font-weight: 600;
+	}
+
+	strong{
+		font-weight: normal;
+		background-color: $accent-lighter;
+	}
+}
+
+
+
+
+.ImgBox{
+	height: auto;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	p{
+		font-family: $primary-font;
+		font-style: italic;
+		color: $gray-light;
+		font-size: 18px;
+		font-weight: normal;
+		width: 600px;
+		margin: auto;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+}
+
+.lqip{
+	width: 100%;
+	transition: 1s;
+	display: block;
+	position: relative;
+	opacity: 0;
+}
+
+.normalImgBox{
+	width: 750px;
+}
+
+.largeImgBox{
+	width: 1200px;
+	margin-left: -225px;
+}
+.coverImgBox{
+	width: 100vw;
+}
+
+
+
+

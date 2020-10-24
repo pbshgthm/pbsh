@@ -17,6 +17,7 @@
     "next-mdx-remote": "^1.0.0",
     "next-optimized-images": "^2.6.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.27.0"
   }
 }

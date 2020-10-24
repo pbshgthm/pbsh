@@ -3,13 +3,12 @@ import hydrate from 'next-mdx-remote/hydrate'
 import matter from 'gray-matter'
 import {join} from 'path'
 
-import {ProjectComp} from '../../components/ProjectComp'
-import ProjectPage from '../../components/ProjectPage'
+import Project, {Components} from '../../components/Project'
 
 import Header from '../../components/Header'
 import Layout from '../../components/Layout'
 
-const components = ProjectComp;
+const components = Components;
 
 
 export default function Works({ source, frontMatter }){
@@ -19,7 +18,7 @@ export default function Works({ source, frontMatter }){
   return(
 		<Layout title={frontMatter.title}>
 			<Header navLink='work'/>
-			<ProjectPage meta={frontMatter}>{content}</ProjectPage>
+			<Project meta={frontMatter}>{content}</Project>
 		</Layout>
 	)
 }
@@ -34,8 +33,9 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { slug: 'vangogh' } },
-    	{ params: { slug: 'covidwire' } },
     ],
     fallback: false
   };
 }
+
+

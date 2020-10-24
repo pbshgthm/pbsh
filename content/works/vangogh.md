@@ -1,43 +1,73 @@
 ---
-title: 'Vangogh'
-desc: 'Color Palette'
-next: ['vangogh','duomoji']
+SLUG      : vangogh
+TITLE     : Great height in the atmosphere, for the sky was a dead black
+SUBTITLE  : Apparently we had reached a great height in the atmosphere
+DOMAIN    : [UX Design,Fullstack Development,Product Management]
+DURATION  : July - March 2019
+COVER     : assets/vangogh/cover.png
+NEXT      : ['covidwire','duomoji']
+SUMMARY   :
+- 🚀 CHALLENGE  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black. Apparently we had reached a great height in the atmosphere.
+- 🌈 OUTCOME    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached. Apparently we had reached a great height in the atmosphere.
+- 👋 MY ROLE    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
+- ⛵ TEAM       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
 ---
 
-# Vangogh - an AI powered color palette generator
-## Designing and building a tool for designers to generate color palettes based on keywords
+# Great height in the atmosphere
 
-![vangogh-cover](assets/vangogh/vangogh-cover.jpg#large)
+Apparently we had reached a [great height](https://google.com) in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere.
 
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out.
 
-<InfoBox>
-	<InfoTitle>🚀  My Role</InfoTitle>
-	<InfoDesc>
-		Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black.
-	</InfoDesc>
-	<InfoTitle>👋  Team</InfoTitle>
-	<InfoDesc>
-		Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars.
-	</InfoDesc>
-</InfoBox>
+![Embedded web view of the CovidWire app](assets/vangogh/sample1.png)
 
-### Google, but for color palettes
-Color palettes are an _important aspect_ of every design. **Choosing a right** palette is far from a trivial task. This seemingly simple task requires a good understanding of colors theory. **More often**, as designers we are faced with a situation where we need to choose a color palette that evokes a certain feeling. Be it illustrations, graphic design or palette for UI elements, creating a contextually _appropriate_ color palette is an essential step in the process. How do we usually go about it ? Is there a way, we can automate the process ? These are the questions I had in mind that made me work on Vangogh.
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
-##### Vangogh uses Machine Learning to generate color palettes based on keywords.
+## 🎨 Designing the Interface
 
-###### How do we make a machine create color palette based on a keyword ?
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
-To answer that question, lets think of how we use a color palette. When designing something, we pick colors very [carefully](https://google.com) in a combination that would represent and evoke the feel of a certain idea. And we use those palettes in art and designs we create. Be it photography or illustrations, their color palettes reflects the choice we made while choosing them.
+![Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.](assets/vangogh/sample2.png)
 
-##### The art, photographs and graphics we make, reflect the color palette we chose that would evoke the desired feeling
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
-### Prototype : Proof of concept
+### Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea.
 
-The idea was to extract palettes from these works we have created, as they reflect how we feel about certain color combinations. For example, when we want a color palette to evoke ‘sunset’ , we could extract color palettes from images of sunsets, as we can assume a good photograph generally has a good color palette. So I broke it down into a set of simple (actually, not simple) process
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
-1. Get lots of images for a keyword
-2. Extract color palette from each image
-3. Hope the palettes are contextually appropriate
+##### This project is under NDA so certain sensitive parts are redacted.
 
-The best source for images that we can search with a keyword — Google Images. But Google Images API contains a lot of duplicates that gives the same palettes. So I decided to go with Bing Image search API. I used a Machine Learning algorithm called K Means clustering to extract the color palettes from each image. I its sent to the front-end to be displayed as palettes.
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+
+1.  Apparently we had reached a great height
+2.  By the same illusion which lifts the horizon
+3.  Looking down into the dark gulf below
+4.  I could see a ruddy light streaming through
+
+---
+
+# Great height in the atmosphere
+
+Apparently we _had reached a great height in the atmosphere_, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the **middle of an immense dark** sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+
+- Apparently we had reached a great height
+- By the same illusion which lifts the horizon
+- Looking down into the dark gulf below
+- I could see a ruddy light streaming through
+- Sable cloud beneath was dished out
+
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+
+## ⚒️ Building the tech stack
+
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+
+![Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.](assets/vangogh/sample3.png#large)
+
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+
+#### Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea.
+
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+
+---
