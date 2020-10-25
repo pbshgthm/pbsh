@@ -10,7 +10,7 @@ const Img=(props)=>{
 		if(imageLoaded){
 			setTimeout(() => {
 				setShowLqip(false)
-			}, 2000);
+			}, 500);
 		}
 	}, [imageLoaded])
 
@@ -20,7 +20,7 @@ const Img=(props)=>{
 				setImageLoaded(true)
         setTimeout(() => {
 					setShowLqip(false)
-				}, 2000);
+				}, 500);
     }
 	}, [])
 
@@ -62,8 +62,6 @@ export const Components={
 	a  : Link,
 }
 
-//BUG IN THE COVER PIC
-//LOADING SOMETIMES
 export default function Project({children,meta}){
 	return(
 			<React.Fragment>
