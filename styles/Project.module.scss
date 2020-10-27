@@ -85,6 +85,17 @@
 	margin: auto;
 	margin-bottom: 100px;
 	
+	.Break {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		margin-left: -25px;
+		width: 100%;
+		height: 10px;
+		background-repeat: no-repeat;
+		background-image: url('/images/wave.svg');
+		margin-left: 0px;
+	}
+
 	.Summary{
 		.SummaryCol{
 			margin-top: 40px;
@@ -124,6 +135,12 @@
 		font-size: 24px;
 		font-weight: 700;
 		margin-top: 50px;
+	}
+
+	h2::after{
+		content: ' //';
+		font-weight: 500;
+		color: $gray-light;
 	}
 
 	h3{
@@ -212,8 +229,8 @@
 	}
 
 	em{
-		color: $gray-light;
-		font-weight: 600;
+		color: $accent-dark;
+		
 	}
 
 	strong{
@@ -249,7 +266,7 @@
 
 .lqip{
 	width: 100%;
-	transition: 0.5s;
+	transition: 0.1s;
 	display: block;
 	position: relative;
 	opacity: 0;
@@ -267,6 +284,29 @@
 	width: 100vw;
 }
 
+.Nav{
+	background: red;
+	position: fixed;
+	z-index: 4;
+	top: 400px;
+	left: 50px;
+}
 
-
-
+.Anchor{
+	margin-left: -150px;
+	h1{
+		display: inline-block;
+	}
+	div{
+		width: 120px;
+		display: inline-block;
+		text-align: right;
+		padding-right: 30px;
+		color: $gray-light;
+		font-size: 24px;
+		vertical-align: top;
+		margin-top: 52px;
+		line-height: 40px;
+		color: $accent-dark;
+	}
+}

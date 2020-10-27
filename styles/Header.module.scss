@@ -20,6 +20,9 @@
 }
 .NavList{
 	float: right;
+	nav{
+		display: inline-block;
+	}
 }
 .NavLink{
 	font-family: $secondary-font;
