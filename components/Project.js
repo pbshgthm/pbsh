@@ -104,15 +104,23 @@ export default function Project({children,meta}){
 
 	return(
 			<React.Fragment>
+				<div className={styles.NavBar}>
+						<div className={styles.Nav} style={{width:(meta.HASH.length*125)+'px'}}>
+							{meta.HASH.map(x=>(
+								<div className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
+										onClick={()=>goTo(x)}>{x}
+								</div>))}
+								<div className={styles.NavSelBar} style={{
+									marginLeft: meta.HASH.indexOf(currHash)*125,
+									opacity: (meta.HASH.indexOf(currHash)>=0?'1':'0')
+								}}/>
+						</div>
+					</div>
 				<div className={styles.Cover}>
 					<Img src={`${meta.COVER}#cover`} alt=""/>
 				</div>
 				<div className={styles.Intro}>
 					<div className={styles.Crumb}>{'works / highlight / '+meta.SLUG}</div>
-					<div className={styles.Nav}>
-						{"CURR :"+currHash}
-						{meta.HASH.map(x=>(<div onClick={()=>goTo(x)}>{x}</div>))}
-					</div>
 					<h1>{meta.TITLE}</h1>
 					<h2>{meta.SUBTITLE}</h2>
 					<div className={styles.Info}>

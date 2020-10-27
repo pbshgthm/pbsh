@@ -6,17 +6,20 @@ import styles from "../styles/Header.module.scss"
 
 
 export default function Header(props){
-	const navLink=['about','work','play']
+	const navLink=['ABOUT','WORKS','BLOG']
 	const [navSel,setnavSel]=useState(props.navLink)
 	return(
 		<div className={styles.Header}>
 			<div className={styles.Content}>
 				<img className={styles.Logo} src="/images/header-logo.png"/>
+				{props.desc&&<div className={styles.Title}>
+					{props.desc}
+				</div>}
 				<div className={styles.NavList}>
 					{navLink.map(x=>(
 						<nav>
 							<Link key={x} href={"/"+x}>
-								<a className={`${styles.NavLink} ${(x===navSel?styles.NavLinkSel:1)}`} onClick={()=>setnavSel(x)}>{x}</a>
+								<a className={`${styles.NavLink} ${(x===navSel?styles.NavLinkSel:'')}`} onClick={()=>setnavSel(x)}>{x}</a>
 							</Link>
 						</nav>
 					))}

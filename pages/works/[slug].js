@@ -16,7 +16,7 @@ export default function Works({ source, frontMatter }){
 	const content = hydrate(source, { components })
   return(
 		<Layout title={ frontMatter.SLUG.charAt(0).toUpperCase() + frontMatter.SLUG.slice(1) + ' - Poobesh Gowtham'}>
-			<Header navLink='work'/>
+			<Header navLink='WORKS' desc={frontMatter.SHORT}/>
 			<Project meta={frontMatter}>{content}</Project>
 		</Layout>
 	)
