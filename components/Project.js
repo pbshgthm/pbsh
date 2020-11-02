@@ -91,14 +91,15 @@ export default function Project({children,meta}){
 	const [currHash,setCurrHash]=useState('')
 
 	useEffect(()=>{
-			window.addEventListener('scroll', ()=>{
-				const curr = document.documentElement.scrollTop
-				const sortedHash = meta.HASH.map(x=>(
-					[x,curr-document.getElementById(x).offsetTop+151]
-				)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
-				if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
-				else setCurrHash('')
-			})
+		//fix the step-wise updation using Events
+		window.addEventListener('scroll', ()=>{
+			const curr = document.documentElement.scrollTop
+			const sortedHash = meta.HASH.map(x=>(
+				[x,curr-document.getElementById(x).offsetTop+151]
+			)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
+			if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
+			else setCurrHash('')
+		})
 	},[])
 	
 
