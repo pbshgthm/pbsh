@@ -4,7 +4,7 @@ TITLE     : Building an AI powered search engine for Color Palettes, used by hun
 DOMAIN    : [UX Design,Fullstack Development,Product Management]
 COVER     : assets/sample/cover.png
 NEXT      : [covidwire,duomoji]
-HASH      : [RESEARCH,PRODUCT,SCIENCE,DESIGN]
+HASH      : [RESEARCH,PRODUCT,ENGINEERING,DESIGN]
 SUMMARY   :
 - Challenge  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black. Apparently we had reached a great height in the atmosphere.
 - Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached. Apparently we had reached a great height in the atmosphere.
@@ -49,7 +49,7 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside. 
 
-# SCIENCE
+# ENGINEERING
 ## Great height in the Plant
 
 The sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.

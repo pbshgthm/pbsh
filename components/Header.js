@@ -14,8 +14,8 @@ export default function Header(props){
 				<img className={styles.Logo} src="/images/header-logo.png"/>
 				<div className={styles.NavList}>
 					{navLink.map(x=>(
-						<nav>
-							<Link key={x} href={"/"+x}>
+						<nav key={x}>
+							<Link href={"/"+x}>
 								<a className={`${(x===navSel?styles.NavSel:'')}`} onClick={()=>setnavSel(x)}>{x.toUpperCase()}</a>
 							</Link>
 						</nav>

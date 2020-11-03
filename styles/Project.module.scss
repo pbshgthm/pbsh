@@ -175,12 +175,13 @@
 
 	p{
 		color: $light-gray;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: normal;
 		width: 600px;
 		margin: auto;
 		text-align: center;
 		margin-top: 5px;
+		line-height: 22px;
 	}
 
 }
@@ -221,6 +222,9 @@
 	transition: 0.5s;
 	visibility: hidden;
 	transition-delay: visibility 2s;
+	padding-bottom: 20px;
+
+	border-bottom: 2px solid $main;
 }
 .NavBarShow{
 	visibility: visible;
@@ -228,7 +232,6 @@
 }
 .NavLink{
 	color: $light-gray;
-	width: 125px;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 10px 0px;
@@ -258,10 +261,8 @@
 }
 
 .NavLink:hover{
-	font-weight: 500;
-	color: $gray-mid;
+	opacity: 1;
 }
-
 
 
 
@@ -269,12 +270,15 @@
 .CoverWrapper{
 	z-index: 10;
 	width: 100vw;
-	background-color: $main;
 	padding-top: 150px;
 	margin-bottom: 100px;
 	text-align: center;
 	color: $dark-gray;
-	background: linear-gradient(0deg, #ffffff 15%, $main 15%);
+	background-image: linear-gradient(0deg, #ffffff 15%, $main 15%);
+	background-image: url('/images/project-cover.svg'), linear-gradient(0deg, #ffffff 15%, $main 15%);
+	background-size: contain;
+	background-repeat: no-repeat;
+
 
 	.Name{
 		background-color: $dark-gray;
@@ -323,8 +327,10 @@
 .Footer{
 	background-color: $main;
 	width: 100vw;
-	height: 50px;
+	height: 70px;
 	color: $dark-gray;
 	text-align: center;
-	line-height: 50px;
+	line-height: 75px;
+	font-size: 18px;
+	font-family: $handwriting;
 }

@@ -94,7 +94,7 @@ export default function Project({children,meta}){
 			<React.Fragment>
 				<div className={`${styles.NavBar} ${currHash!==''?styles.NavBarShow:''}`}>
 					{hashList.map(x=>(
-						<div className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
+						<div key={x} className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
 							onClick={()=>goTo(x)}>{x}
 						</div>))}
 				</div>
