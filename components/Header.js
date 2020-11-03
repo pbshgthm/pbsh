@@ -6,24 +6,20 @@ import styles from "../styles/Header.module.scss"
 
 
 export default function Header(props){
-	const navLink=['ABOUT','WORKS','BLOG']
+	const navLink=['about','works','blog']
 	const [navSel,setnavSel]=useState(props.navLink)
 	return(
 		<div className={styles.Header}>
 			<div className={styles.Content}>
 				<img className={styles.Logo} src="/images/header-logo.png"/>
-				{props.desc&&<div className={styles.Title}>
-					{props.desc}
-				</div>}
 				<div className={styles.NavList}>
 					{navLink.map(x=>(
 						<nav>
 							<Link key={x} href={"/"+x}>
-								<a className={`${styles.NavLink} ${(x===navSel?styles.NavLinkSel:'')}`} onClick={()=>setnavSel(x)}>{x}</a>
+								<a className={`${(x===navSel?styles.NavSel:'')}`} onClick={()=>setnavSel(x)}>{x.toUpperCase()}</a>
 							</Link>
 						</nav>
 					))}
-					<div className={styles.NavSelbar} style={{marginLeft:((navLink.indexOf(navSel)*70)+'px')}}></div>
 				</div>
 			</div>
 		</div>

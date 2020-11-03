@@ -1,21 +1,19 @@
 ---
-SLUG      : sample
-TITLE     : Great height in the atmosphere, for the sky was a dead black
-SHORT     : Vangogh - Search Engine for Color Palettes
-SUBTITLE  : Apparently we had reached a great height in the atmosphere
+SLUG      : covidwire
+TITLE     : Building an AI powered search engine for Color Palettes, used by hundereds of designers
 DOMAIN    : [UX Design,Fullstack Development,Product Management]
-DURATION  : July - March 2019
 COVER     : assets/sample/cover.png
 NEXT      : [covidwire,duomoji]
-HASH      : [RESEARCH,PRODUCT,TECH,SCIENCE,DESIGN]
+HASH      : [RESEARCH,PRODUCT,SCIENCE,DESIGN]
 SUMMARY   :
-- 🚀 CHALLENGE  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black. Apparently we had reached a great height in the atmosphere.
-- 🌈 OUTCOME    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached. Apparently we had reached a great height in the atmosphere.
-- 👋 MY ROLE    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
-- ⛵ TEAM       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
+- Challenge  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black. Apparently we had reached a great height in the atmosphere.
+- Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached. Apparently we had reached a great height in the atmosphere.
+- My Role    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
+- Team       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
 ---
 
-# Great height in the RESEARCH#RESEARCH
+# RESEARCH
+## Great height in the Atmosphere
 
 Apparently we had reached a [great height](https://google.com) in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere.
 
@@ -25,11 +23,12 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the **spectator on a hillside, the sable cloud beneath was dished out**, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
 
-# Great height in the PRODUCT#PRODUCT
+# PRODUCT
+## Great height in the World
 
 Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
-## 🎨 Designing the Interface
+### Designing the Interface
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
@@ -37,12 +36,12 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. 
 
-# Great height in the Sky#TECH
 
+## Great height in the Sky
 
 By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
-### Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea.
+#### Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea.
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
@@ -50,7 +49,8 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside. 
 
-# Great height in the SCIENCE#SCIENCE
+# SCIENCE
+## Great height in the Plant
 
 The sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
@@ -59,9 +59,8 @@ The sable cloud beneath was dished out, and the car seemed to float in the middl
 3.  Looking down into the dark gulf below
 4.  I could see a ruddy light streaming through
 
----
-
-# Great height in the atmosphere#DESIGN
+# DESIGN
+## Great height in the atmosphere
 
 Apparently we _had reached a great height in the atmosphere_, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the **middle of an immense dark** sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
@@ -73,7 +72,7 @@ Apparently we _had reached a great height in the atmosphere_, for the sky was a 
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 
-## ⚒️ Building the tech stack
+## Building the tech stack
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
@@ -84,5 +83,3 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 #### Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea.
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
-
----
