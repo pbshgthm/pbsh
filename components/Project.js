@@ -1,27 +1,24 @@
 import styles from '../styles/Project.module.scss'
 import {useState,useEffect,useRef} from 'react'
+import Link from 'next/link'
+import {animateScroll as scroll} from 'react-scroll';
 
 const Img=(props)=>{
 	const [imageLoaded, setImageLoaded] = useState(false);
 	const [showLqip,setShowLqip] = useState(true);
 	const imgRef = useRef(false);
 
-	useEffect(() => {
-		if(imageLoaded){
-			setTimeout(() => {
-				setShowLqip(false)
-			}, 500);
-		}
-	}, [imageLoaded])
-
+	
+	function handleLoaded(){
+		setImageLoaded(true);
+		setTimeout(() => {
+			setShowLqip(false)
+		}, 100);
+	}
+	
 	useEffect(() => {
 		const img = imgRef.current;
-    if (img && img.complete) {
-				setImageLoaded(true)
-        setTimeout(() => {
-					setShowLqip(false)
-				}, 500);
-    }
+    if (img && img.complete) handleLoaded();
 	}, [])
 
 	const srcStr=props.src.split('#')
@@ -43,7 +40,7 @@ const Img=(props)=>{
         alt={props.alt}
 				ref={imgRef}
 				style={{position:showLqip?'absolute':'relative'}}
-				onLoad={() => setImageLoaded(true)}
+				onLoad={() => handleLoaded()}
       />
 			{(props.alt.length>0)&&<p>{props.alt}</p>}
 		</div>
@@ -51,22 +48,76 @@ const Img=(props)=>{
 }
 
 
+const H1=(props)=>{
+	const children=props.children.split('#')
+	const hash=(children.length>0)?children[1]:false;
+	if(!hash)return(<h1>{children[0]}</h1>)
+	
+	return(
+		<div className={styles.Anchor}>
+			<div>{'#'+hash}</div>
+			<h1 id={hash}>{children[0]}</h1>
+		</div>
+		
+	)
+	
+}
+
 const Quote=(props)=>(<blockquote {...props} />);
 const Break=(props)=>(<div className={styles.Break}/>)
-const Link=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>)
+const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>)
 
 export const Components={
+	h1 : H1,
 	img: Img,
 	h4 : Quote,
 	hr : Break,
-	a  : Link,
+	a  : Url,
 }
 
+
+function goTo(hash){
+	const pos = document.getElementById(hash).offsetTop-150;
+	scroll.scrollTo(pos,{
+		smooth: 'easeInOut'
+		}
+	);
+}
+
+
+
 export default function Project({children,meta}){
+	
+	const [currHash,setCurrHash]=useState('')
+
+	useEffect(()=>{
+			window.addEventListener('scroll', ()=>{
+				const curr = document.documentElement.scrollTop
+				const sortedHash = meta.HASH.map(x=>(
+					[x,curr-document.getElementById(x).offsetTop+151]
+				)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
+				if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
+				else setCurrHash('')
+			})
+	},[])
+	
+
 	return(
 			<React.Fragment>
+				<div className={styles.NavBar}>
+						<div className={styles.Nav} style={{width:(meta.HASH.length*125)+'px'}}>
+							{meta.HASH.map(x=>(
+								<div className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
+										onClick={()=>goTo(x)}>{x}
+								</div>))}
+								<div className={styles.NavSelBar} style={{
+									marginLeft: meta.HASH.indexOf(currHash)*125,
+									opacity: (meta.HASH.indexOf(currHash)>=0?'1':'0')
+								}}/>
+						</div>
+					</div>
 				<div className={styles.Cover}>
-					<Img src={"assets/vangogh/cover.png#cover"} alt=""/>
+					<Img src={`${meta.COVER}#cover`} alt=""/>
 				</div>
 				<div className={styles.Intro}>
 					<div className={styles.Crumb}>{'works / highlight / '+meta.SLUG}</div>

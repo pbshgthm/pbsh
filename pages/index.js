@@ -14,6 +14,11 @@ export default function Home() {
           <a>vangogh</a>
         </Link>
       </li>
+			<li>
+        <Link href="/works/sample">
+          <a>sample</a>
+        </Link>
+      </li>
     </ul>
   )
 }
