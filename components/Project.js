@@ -47,25 +47,12 @@ const Img=(props)=>{
 	)
 }
 
-
-const H1=(props)=>{
-	const children=props.children.split('#')
-	const hash=(children.length>0)?children[1]:false;
-	if(!hash)return(<h1>{children[0]}</h1>)
-	
-	return(
-		<div className={styles.Anchor}>
-			<div>{'#'+hash}</div>
-			<h1 id={hash}>{children[0]}</h1>
-		</div>
-		
-	)
-	
-}
-
-const Quote=(props)=>(<blockquote {...props} />);
 const Break=(props)=>(<div className={styles.Break}/>)
+
+const H1=(props)=>(<><Break/><h1 id={props.children}>{props.children}</h1></>)
+const Quote=(props)=>(<blockquote {...props} />);
 const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>)
+
 
 export const Components={
 	h1 : H1,
@@ -77,7 +64,7 @@ export const Components={
 
 
 function goTo(hash){
-	const pos = document.getElementById(hash).offsetTop-150;
+	const pos = document.getElementById(hash).offsetTop-200;
 	scroll.scrollTo(pos,{
 		smooth: 'easeInOut'
 		}
@@ -89,13 +76,13 @@ function goTo(hash){
 export default function Project({children,meta}){
 	
 	const [currHash,setCurrHash]=useState('')
-
+	const hashList=['SUMMARY'].concat(meta.HASH)
 	useEffect(()=>{
 		//fix the step-wise updation using Events
 		window.addEventListener('scroll', ()=>{
 			const curr = document.documentElement.scrollTop
-			const sortedHash = meta.HASH.map(x=>(
-				[x,curr-document.getElementById(x).offsetTop+151]
+			const sortedHash = hashList.map(x=>(
+				[x,curr-document.getElementById(x).offsetTop+201]
 			)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
 			if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
 			else setCurrHash('')
@@ -105,34 +92,28 @@ export default function Project({children,meta}){
 
 	return(
 			<React.Fragment>
-				<div className={styles.NavBar}>
-						<div className={styles.Nav} style={{width:(meta.HASH.length*125)+'px'}}>
-							{meta.HASH.map(x=>(
-								<div className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
-										onClick={()=>goTo(x)}>{x}
-								</div>))}
-								<div className={styles.NavSelBar} style={{
-									marginLeft: meta.HASH.indexOf(currHash)*125,
-									opacity: (meta.HASH.indexOf(currHash)>=0?'1':'0')
-								}}/>
-						</div>
-					</div>
-				<div className={styles.Cover}>
-					<Img src={`${meta.COVER}#cover`} alt=""/>
+				<div className={`${styles.NavBar} ${currHash!==''?styles.NavBarShow:''}`}>
+					{hashList.map(x=>(
+						<div className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
+							onClick={()=>goTo(x)}>{x}
+						</div>))}
 				</div>
-				<div className={styles.Intro}>
-					<div className={styles.Crumb}>{'works / highlight / '+meta.SLUG}</div>
+				
+				
+				<div className={styles.CoverWrapper}>
+					<div className={styles.Name}>{meta.SLUG.toUpperCase()}</div>
 					<h1>{meta.TITLE}</h1>
-					<h2>{meta.SUBTITLE}</h2>
-					<div className={styles.Info}>
-						<div className={styles.Domain}>
-							{meta.DOMAIN.map(x=>(<span key={x}>{x}</span>))}
-						</div>
-						<span>//{meta.DURATION}</span>
+					<div className={styles.Domain}>
+							{meta.DOMAIN.map(x=>(<span key={x}>{x.toUpperCase()}</span>))}
 					</div>
-					<div className={styles.Break}/>
+					<div className={styles.Cover}>
+						<Img src={`${meta.COVER}#cover`} alt=""/>
+					</div>
 				</div>
+
+
 				<div className={styles.Body}>
+					<H1>SUMMARY</H1>
 					<div className={styles.Summary}>
 						<div className={styles.SummaryCol}>
 							<div>
@@ -149,9 +130,10 @@ export default function Project({children,meta}){
 						))}
 						</div>
 					</div>
-					<div className={styles.Break}/>
 					{children}
 				</div>
+
+				<div className={styles.Footer}>Handcrafted by Poobesh Gowtham</div>
 			</React.Fragment>
 	)
 }

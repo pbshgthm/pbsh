@@ -10,13 +10,12 @@ import Layout from '../../components/Layout'
 
 const components = Components;
 
-
 export default function Works({ source, frontMatter }){
 	
 	const content = hydrate(source, { components })
   return(
 		<Layout title={ frontMatter.SLUG.charAt(0).toUpperCase() + frontMatter.SLUG.slice(1) + ' - Poobesh Gowtham'}>
-			<Header navLink='WORKS' desc={frontMatter.SHORT}/>
+			<Header navLink='works'/>
 			<Project meta={frontMatter}>{content}</Project>
 		</Layout>
 	)
