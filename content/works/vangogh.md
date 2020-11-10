@@ -1,8 +1,9 @@
 ---
 SLUG      : vangogh
+THEME     : Teal
 TITLE     : Building an AI powered search engine for Color Palettes, used by hundereds of designers
 DOMAIN    : [UX Design,Fullstack Development,SaaS Management]
-COVER     : sample_assets/cover.png
+COVER     : vangogh_assets/cover.png
 NEXT      : [covidwire,duomoji]
 HASH      : [RESEARCH,PRODUCT,ENGINEERING,DESIGN]
 SUMMARY   :

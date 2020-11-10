@@ -6,7 +6,7 @@ import styles from "../styles/Header.module.scss"
 
 
 export default function Header(props){
-	const navLink=['about','works','blog']
+	const navLink=['about','works','blog','fun ツ']
 	const [navSel,setnavSel]=useState(props.navLink)
 	return(
 		<div className={styles.Header}>

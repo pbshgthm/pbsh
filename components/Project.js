@@ -51,9 +51,9 @@ const Img=(props)=>{
 
 const Break=(props)=>(<div className={styles.Break}/>)
 
-const H1=(props)=>(<><Break/><h1 id={props.children}>{props.children}</h1></>)
+const H1=(props)=>(<><Break/><h1 id={props.children}>{props.children}</h1></>);
 const Quote=(props)=>(<blockquote {...props} />);
-const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>)
+const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>);
 
 
 
@@ -80,12 +80,14 @@ export default function Project({children,meta}){
 	
 	const [currHash,setCurrHash]=useState('')
 	const hashList=['SUMMARY'].concat(meta.HASH)
-	const [currScroll,setCurrScroll]=useState(0)
+	const [progress,setProgress]=useState(0)
 
 	useEffect(()=>{
-		//fix the step-wise updation using Events
 		window.addEventListener('scroll', ()=>{
 			const curr = document.documentElement.scrollTop
+			const progress = (document.documentElement.scrollTop + document.body.scrollTop) /(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+			
+			setProgress(progress)
 			const sortedHash = hashList.map(x=>(
 				[x,curr-document.getElementById(x).offsetTop+101]
 			)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
@@ -95,13 +97,11 @@ export default function Project({children,meta}){
 		})
 	},[])
 	
-	useEffect(()=>{
-
-	},[])
 
 
 	return(
-			<div className={styles.Yellow}>
+			<div className={styles[`Theme${meta.THEME}`]}>
+				<div className={styles.ProgressBar} style={{width:`${progress}vw`}}></div>
 				<div className={`${styles.NavBar} ${currHash!==''?styles.NavBarShow:''}`}>
 					{hashList.map(x=>(
 						<div key={x} className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
