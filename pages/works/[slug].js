@@ -32,6 +32,7 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { slug: 'sample' } },
+			{ params: { slug: 'vangogh' } },
     ],
     fallback: false
   };

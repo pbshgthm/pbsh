@@ -1,7 +1,18 @@
-@use "base" as *;
+.Project {
+  
+	--main-light: #FFF1E0;
+	--main: #FFB864;
+	--main: red;
+	--dark-gray: #303030;
+	--mid-gray: #646464;
+	--darker-gray: #575757;
+	--light-gray: #757575;
+	--lighter-gray: #F1F1F1;
 
-@mixin ProjectTheme($theme-name,$main) {
-.#{$theme-name}{
+	--handwriting: 'Satisfy', cursive;
+}
+
+
 
 .Break {
 	margin-top: 40px;
@@ -19,15 +30,11 @@
 
 
 .Body{
-	/*BODY BEGIN*/
 	width: 700px;
 	margin: auto;
 	margin-bottom: 100px;
-
+	
 	.Summary{
-	/*SUMMARY BEGIN*/
-
-		/*SUMMARY COL BEGIN*/
 		.SummaryCol{
 			margin-top: 10px;
 			margin-bottom: 30px;
@@ -36,32 +43,25 @@
 			vertical-align: top;
 			padding-right: 50px;
 		}
-
 		.SummaryCol:last-of-type{
 			padding-right: 0px;
 		}
-
-		h4{
+		h4 .H4{
 			margin-bottom: 0px;
 			margin-top: 40px;
 			font-size: 20px;
-			color: $dark-gray;
+			color: var(--dark-gray);
 		}
-
-		p{
+		p .P{
 			margin-top: 10px;
 			font-size: 18px;
 			line-height: 32px;
-			color: $mid-gray;
+			color: var(--mid-gray);
 		}
-		/*SUMMARY COL END*/
-
-	/*SUMMARY END*/
 	}
 
-	/*BODY CONTI*/
-	h1{
-		color: $main;
+	h1 .H1{
+		color: var(--main);
 		font-size: 24px;
 		font-weight: 700;
 		padding-left: 15px;
@@ -70,34 +70,34 @@
 		margin-left: -30px;
 		height: 18px;
 		line-height: 20px;
-		border-left: 60px $main solid;
+		border-left: 60px var(--main) solid;
 	}
 
-	h2{
-		color: $dark-gray;
+	h2 .H2{
+		color: var(--dark-gray);
 		font-size: 36px;
 		font-weight: 700;
 		margin-top: 50px;
 	}
 
-	h3{
-		color: $mid-gray;
+	h3 .H3{
+		color: var(--mid-gray);
 		font-weight: 700;
 		font-size: 20px;
 	}
 
-	h5{
-		background-color: $lighter-gray;
+	h5 .H5{
+		background-color: var(--lighter-gray);
 		padding: 10px;
 		border-radius: 5px;
 		font-weight: normal;
 		text-align: center;
 		font-size: 18px;
-		color: $mid-gray;
+		color: var(--mid-gray);
 	}
 
-	blockquote{
-		color: $darker-gray;
+	blockquote .QUOTE{
+		color: var(--darker-gray);
 		margin-left: 0px;
 		font-size: 20px;
 		padding-left:15px;
@@ -105,46 +105,46 @@
 		line-height: 200%;
 		margin-top: 40px;
 		margin-bottom: 40px;
-		border-left: 5px $main solid;
+		border-left: 5px var(--main) solid;
 	}
 
-	p{
+	p .P{
 		margin-top: 10px;
-		color: $mid-gray;
+		color: var(--mid-gray);
 		font-size: 18px;
 		line-height: 36px;
 	}
 
-	img{
+	img .IMG{
 		top: 0px;
 		width: 100%;
 	}
 	
-	a{
-		color: $mid-gray;
+	a .A{
+		color: var(--mid-gray);
 		color: #007ED9;
 		text-decoration: none;
 	}
 
-	a:hover{
+	a .A:hover{
 		opacity: 0.8;
 		text-decoration: underline;
 	}
 
-	ol{
-			color: $mid-gray;
+	ol .OL{
+			color: var(--mid-gray);
 			font-size: 18px;
 			font-weight: normal;
 			margin-bottom: 40px;
 			margin-top: 30px;
 			padding-left: 30px;
-			li{
+			li .LI{
 				margin-bottom: 12px;
 			}
 	}
 
-	ul{
-		color: $mid-gray;
+	ul .UL{
+		color: var(--mid-gray);
 		font-size: 18px;
 		font-weight: normal;
 		margin-top: 30px;
@@ -152,36 +152,33 @@
 		padding-left: 0px;
 		list-style: none;
 
-			li{
+			li .LI{
 				margin-bottom: 12px;
 			}
 
-			li::before{
+			li .LI::before{
 				content: '▬';
-				color: $main;
+				color: var(--main);
 				font-size: 18px;
 				margin-right: 15px;
 			}
 	}
 
-	strong{
+	strong .STRONG{
 		font-weight: 700;
 	}
 
-	em{
+	em .EM{
 		font-style: normal;
 		font-weight: normal;
-		background-color: $main-light;
+		background-color: var(--main-light);
 	}
-	/*BODY END*/
 }
 
 
 
-/*IMG BEGIN*/
 
 .ImgBox{
-	/*IMGBOX BEGIN*/
 	height: auto;
 	position: relative;
 	display: block;
@@ -189,8 +186,8 @@
 	margin-top: 40px;
 	margin-bottom: 40px;
 
-	p{
-		color: $light-gray;
+	p .P{
+		color: var(--light-gray);
 		font-size: 14px;
 		font-weight: normal;
 		width: 600px;
@@ -199,7 +196,7 @@
 		margin-top: 5px;
 		line-height: 22px;
 	}
-	/*IMGBOX END*/
+
 }
 
 .lqip{
@@ -226,10 +223,10 @@
 	margin-bottom: -7px;
 	margin-top: 0px;
 }
-/*IMG END*/
 
 
-/*NAV BEGIN*/
+
+
 .NavBar{
 	position: fixed;
 	top: 300px;
@@ -239,16 +236,15 @@
 	visibility: hidden;
 	transition-delay: visibility 2s;
 	padding-bottom: 20px;
-	border-bottom: 2px solid $main;
-}
 
+	border-bottom: 2px solid var(--main);
+}
 .NavBarShow{
 	visibility: visible;
 	opacity: 1;
 }
-
 .NavLink{
-	color: $light-gray;
+	color: var(--light-gray);
 	font-size: 16px;
 	font-weight: 400;
 	padding: 10px 0px;
@@ -260,7 +256,7 @@
 .NavLink::before{
 	content: '●';
 	display: block;
-	color: $main;
+	color: var(--main);
 	width: 20px;
 	height: 14px;
 	line-height: 11px;
@@ -269,7 +265,6 @@
 	margin-right: 10px;
 	visibility: hidden;
 }
-
 .NavLinkSel{
 	opacity: 1;
 }
@@ -281,27 +276,25 @@
 .NavLink:hover{
 	opacity: 1;
 }
-/*NAV END*/
 
 
 
 
 .CoverWrapper{
-	/*COVER WRAPPER BEGIN*/
 	z-index: 10;
 	width: 100vw;
 	padding-top: 150px;
 	margin-bottom: 100px;
 	text-align: center;
-	color: $dark-gray;
-	background-image: linear-gradient(0deg, #ffffff 15%, $main 15%);
-	background-image: url('/images/project-cover.svg'), linear-gradient(0deg, #ffffff 15%, $main 15%);
+	color: var(--dark-gray);
+	background-image: linear-gradient(0deg, #ffffff 15%, var(--main) 15%);
+	background-image: url('/images/project-cover.svg'), linear-gradient(0deg, #ffffff 15%, var(--main) 15%);
 	background-size: contain;
 	background-repeat: no-repeat;
 
 
 	.Name{
-		background-color: $dark-gray;
+		background-color: var(--dark-gray);
 		display: inline-block;
 		margin: auto;
 		color: #ffffff;
@@ -309,7 +302,7 @@
 		padding: 5px 30px;
 		font-weight: 600;
 	}
-	h1{
+	h1 .H1{
 		font-weight: 700;
 		font-size: 64px;
 		width: 1000px;
@@ -320,49 +313,38 @@
 		font-size: 20px;
 		font-weight: 700;
 		margin-top: 50px;
-		span{
+		span .SPAN{
 			margin-right: 10px;
 		}
-		span:not(:last-of-type)::after{
+		span .SPAN:not(:last-of-type)::after{
 			content: '•';
 			color: #ffffff;
 			margin-left: 10px;
 		}
 
 	}
-	img{
+	img .IMG{
 		top: 0px;
 		width: 100%;
 	}
 	.Cover{
 		width: 1000px;
-		background-color: $dark-gray;
+		background-color: var(--dark-gray);
 		padding: 30px;
 		margin: auto;
 		margin-top: 50px;
 	}
-	/*COVER WRAPPER END*/
+
 }
 
-
 .Footer{
-	background-color: $main;
+	background-color: var(--main);
 	width: 100vw;
 	height: 70px;
-	color: $dark-gray;
+	color: var(--dark-gray);
 	text-align: center;
 	line-height: 75px;
 	font-size: 18px;
 	font-family: $handwriting;
 	margin-bottom: 0px;
 }
-
-
-}}
-
-
-@include ProjectTheme('Green',#497265);
-@include ProjectTheme('Yellow',#FFB864);
-@include ProjectTheme('Blue',blue);
-@include ProjectTheme('Red',red);
-@include ProjectTheme('Yell',yellow);

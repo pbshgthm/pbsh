@@ -3,6 +3,8 @@ import {useState,useEffect,useRef} from 'react'
 import Link from 'next/link'
 import {animateScroll as scroll} from 'react-scroll';
 
+
+
 const Img=(props)=>{
 	const [imageLoaded, setImageLoaded] = useState(false);
 	const [showLqip,setShowLqip] = useState(true);
@@ -54,6 +56,7 @@ const Quote=(props)=>(<blockquote {...props} />);
 const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>)
 
 
+
 export const Components={
 	h1 : H1,
 	img: Img,
@@ -64,7 +67,7 @@ export const Components={
 
 
 function goTo(hash){
-	const pos = document.getElementById(hash).offsetTop-200;
+	const pos = document.getElementById(hash).offsetTop-100;
 	scroll.scrollTo(pos,{
 		smooth: 'easeInOut'
 		}
@@ -77,21 +80,28 @@ export default function Project({children,meta}){
 	
 	const [currHash,setCurrHash]=useState('')
 	const hashList=['SUMMARY'].concat(meta.HASH)
+	const [currScroll,setCurrScroll]=useState(0)
+
 	useEffect(()=>{
 		//fix the step-wise updation using Events
 		window.addEventListener('scroll', ()=>{
 			const curr = document.documentElement.scrollTop
 			const sortedHash = hashList.map(x=>(
-				[x,curr-document.getElementById(x).offsetTop+201]
+				[x,curr-document.getElementById(x).offsetTop+101]
 			)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
+
 			if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
 			else setCurrHash('')
 		})
 	},[])
 	
+	useEffect(()=>{
+
+	},[])
+
 
 	return(
-			<React.Fragment>
+			<div className={styles.Yellow}>
 				<div className={`${styles.NavBar} ${currHash!==''?styles.NavBarShow:''}`}>
 					{hashList.map(x=>(
 						<div key={x} className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
@@ -118,14 +128,14 @@ export default function Project({children,meta}){
 						<div className={styles.SummaryCol}>
 							<div>
 								<h4>{Object.entries(meta.SUMMARY[0])[0][0]}</h4>
-								<p>{Object.entries(meta.SUMMARY[0])[0][1]}</p>
+								<p dangerouslySetInnerHTML={{ __html:Object.entries(meta.SUMMARY[0])[0][1]}}/>
 							</div>
 						</div>
 						<div className={styles.SummaryCol}>
 							{meta.SUMMARY.slice(1).map((x,i)=>(
 								<div key={i}>
 									<h4>{Object.entries(x)[0][0]}</h4>
-									<p>{Object.entries(x)[0][1]}</p>
+									<p dangerouslySetInnerHTML={{ __html:Object.entries(x)[0][1]}}/>
 								</div>
 						))}
 						</div>
@@ -134,6 +144,6 @@ export default function Project({children,meta}){
 				</div>
 
 				<div className={styles.Footer}>Handcrafted by Poobesh Gowtham</div>
-			</React.Fragment>
+			</div>
 	)
 }

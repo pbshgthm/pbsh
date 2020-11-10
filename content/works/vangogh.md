@@ -1,12 +1,12 @@
 ---
-SLUG      : covidwire
+SLUG      : vangogh
 TITLE     : Building an AI powered search engine for Color Palettes, used by hundereds of designers
-DOMAIN    : [UX Design,Fullstack Development,Product Management]
+DOMAIN    : [UX Design,Fullstack Development,SaaS Management]
 COVER     : sample_assets/cover.png
 NEXT      : [covidwire,duomoji]
 HASH      : [RESEARCH,PRODUCT,ENGINEERING,DESIGN]
 SUMMARY   :
-- Challenge  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black. Apparently we had reached a great height in the atmosphere.
+- Challenge  : Apparently we had reached a <b>great height in the</b> atmosphere, for the sky was a dead black, and the stars. Apparently we had reached a great height in the atmosphere, for the sky was a dead black. Apparently we had reached a great height in the atmosphere.
 - Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached. Apparently we had reached a great height in the atmosphere.
 - My Role    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
 - Team       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
