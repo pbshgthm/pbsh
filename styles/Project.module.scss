@@ -3,6 +3,14 @@
 @mixin ProjectTheme($theme-name,$theme,$theme-dark,$theme-light) {
 .#{$theme-name}{
 
+::-moz-selection { 
+	background: $theme-light;
+}
+	
+::selection {
+	background: $theme-light;
+}
+
 .Break {
 	margin-top: 60px;
 	display: block;
@@ -11,13 +19,14 @@
 	fill: $theme-dark;
 }
 
-
+.BodyContainer{
+	margin: auto;
+	display: flex;
+}
 .Body{
 	/*BODY BEGIN*/
 	width: 700px;
 	margin: auto;
-	margin-bottom: 100px;
-
 	.Summary{
 	/*SUMMARY BEGIN*/
 
@@ -278,6 +287,7 @@
 
 .NavLinkSel{
 	opacity: 1;
+	font-weight: 600;
 	color: $theme-dark;
 }
 
@@ -286,6 +296,7 @@
 }
 
 .NavLink:hover{
+	color: $theme-dark;
 	opacity: 1;
 }
 /*NAV END*/

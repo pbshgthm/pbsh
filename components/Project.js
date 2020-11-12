@@ -58,37 +58,38 @@ export default function Project({children,meta}){
 				</div>
 
 
-				<div className={styles.Body}>
-					<H1>SUMMARY</H1>
-					<div className={styles.Summary}>
-						<div className={styles.SummaryCol}>
-							<div>
-								<h4>{Object.entries(meta.SUMMARY[0])[0][0]}</h4>
-								<p dangerouslySetInnerHTML={{ __html:Object.entries(meta.SUMMARY[0])[0][1]}}/>
+				<div className={styles.BodyContainer}>
+					<div className={styles.Body}>
+						<H1>SUMMARY</H1>
+						<div className={styles.Summary}>
+							<div className={styles.SummaryCol}>
+								<div>
+									<h4>{Object.entries(meta.SUMMARY[0])[0][0]}</h4>
+									<p dangerouslySetInnerHTML={{ __html:Object.entries(meta.SUMMARY[0])[0][1]}}/>
+								</div>
+							</div>
+							<div className={styles.SummaryCol}>
+								{meta.SUMMARY.slice(1).map((x,i)=>(
+									<div key={i}>
+										<h4>{Object.entries(x)[0][0]}</h4>
+										<p dangerouslySetInnerHTML={{ __html:Object.entries(x)[0][1]}}/>
+									</div>
+							))}
 							</div>
 						</div>
-						<div className={styles.SummaryCol}>
-							{meta.SUMMARY.slice(1).map((x,i)=>(
-								<div key={i}>
-									<h4>{Object.entries(x)[0][0]}</h4>
-									<p dangerouslySetInnerHTML={{ __html:Object.entries(x)[0][1]}}/>
-								</div>
-						))}
-						</div>
+
+						{meta.FEATURED&&<div>
+							<h4 style={{wordSpacing: '10px'}}>Featured 🎉</h4>
+							<div className={styles.FeaturedBox}>
+								{meta.FEATURED.map(x=>
+									(<a href={x[0]} target="_blank" rel="noopener noreferrer">
+										<img style={{width:(730/meta.FEATURED.length-30)+'px'}} src={require(`../content/works/${x[1]}`)}/>
+									</a>))
+								}
+							</div>
+						</div>}
+						{children}
 					</div>
-
-					{meta.FEATURED&&<div>
-						<h4>Featured</h4>
-						<div className={styles.FeaturedBox}>
-							{meta.FEATURED.map(x=>
-								(<a href={x[0]} target="_blank" rel="noopener noreferrer">
-									<img style={{width:(730/meta.FEATURED.length-30)+'px'}} src={require(`../content/works/${x[1]}`)}/>
-								</a>))
-							}
-						</div>
-					</div>}
-
-					{children}
 				</div>
 
 				<div className={styles.Footer}>Handcrafted by Poobesh Gowtham</div>
