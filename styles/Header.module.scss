@@ -1,5 +1,6 @@
 @use "base" as *;
 
+
 .Header{
 	width: 100vw;
 	position: fixed;
@@ -8,38 +9,69 @@
 	top: 0px;
 	z-index: 3;
 }
+
 .Content{
 	width: 1000px;
 	margin: auto;
-	padding-top: 12px;
+	padding-top: 10px;
 }
 
-.Logo{
+
+@mixin HeaderTheme($theme-name,$theme) {
+.#{$theme-name}{
+
+.Identity{
+	font-size: 24px;
+	color: $mid-gray;
+	font-family: $handwriting;
 	float: left;
 	height: 40px;
+	line-height: 43px;
 }
+
+.Identity::after{
+	content: '●';
+	color: $theme;
+	margin-left: 3px;
+	font-size: 15px;
+}
+
 .NavList{
 	float: right;
+
 	nav{
 		display: inline-block;
 		margin-left: 30px;
 		cursor: pointer;
 		line-height: 40px;
 		position: relative;
+		color: $mid-gray;
 	}
+
+	nav:last-of-type::after{
+		content: ' ツ'
+	}
+
 	a{
 		color: $mid-gray;
 		text-decoration: none;
 	}
+
 	.NavSel::after{
 		content: '•';
-		color: $main;
+		color: $theme;
 		font-size: 24px;
 		display: inline-block;
 		position: absolute;
-    bottom: -17px;
+		bottom: -17px;
 		left: 0;
 		text-align: center;
-    width: 100%;
+		width: 100%;
 	}
+
 }
+
+}}
+
+@include HeaderTheme('ThemeYellow',$yellow-dark);
+@include HeaderTheme('ThemeGreen',$green-dark);

@@ -1,6 +1,6 @@
 ---
 SLUG      : vangogh
-THEME     : Teal
+THEME     : Green
 TITLE     : Building an AI powered search engine for Color Palettes, used by hundereds of designers
 DOMAIN    : [UX Design,Fullstack Development,SaaS Management]
 COVER     : vangogh_assets/cover.png
@@ -11,6 +11,11 @@ SUMMARY   :
 - Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached. Apparently we had reached a great height in the atmosphere.
 - My Role    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
 - Team       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars. Apparently we had reached.
+FEATURED  : [
+	[https://www.producthunt.com/posts/vangogh,vangogh_assets/producthunt.png],
+	[https://us12.campaign-archive.com/?u=88328e131c58d0c0995e899eb&id=5d4998f6eb,vangogh_assets/anotherdesignnewsletter.png],
+	[https://prototypr.io/toolbox/vangogh/,vangogh_assets/prototypr.png]
+]
 ---
 
 # RESEARCH

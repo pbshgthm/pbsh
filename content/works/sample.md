@@ -1,5 +1,6 @@
 ---
 SLUG      : covidwire
+THEME			: Yellow
 TITLE     : Building an AI powered search engine for Color Palettes, used by hundereds of designers
 DOMAIN    : [UX Design,Fullstack Development,Product Management]
 COVER     : sample_assets/cover.png

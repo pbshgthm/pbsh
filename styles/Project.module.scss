@@ -4,17 +4,11 @@
 .#{$theme-name}{
 
 .Break {
-	margin-top: 40px;
-	margin-bottom: 20px;
-	width: 100%;
+	margin-top: 60px;
+	display: block;
+	margin-bottom: 65px;
 	text-align: center;
-}
-
-.Break::after{
-	font-size: 18px;
-	letter-spacing: 2px;
-	content: '• • •';
-	color: #6D6D6D;
+	fill: $theme-dark;
 }
 
 
@@ -41,14 +35,6 @@
 			padding-right: 0px;
 		}
 
-		h4{
-			margin-bottom: 0px;
-			margin-top: 40px;
-			font-size: 20px;
-			color: $dark-gray;
-		}
-
-
 		p{
 			margin-top: 10px;
 			font-size: 18px;
@@ -60,6 +46,27 @@
 	/*SUMMARY END*/
 	}
 
+	h4{
+		margin-bottom: 0px;
+		margin-top: 40px;
+		font-size: 20px;
+		color: $dark-gray;
+	}
+
+	.FeaturedBox{
+		margin-top: 20px;
+		margin-right: -30px;
+
+		img{
+			margin-right: 30px;
+			transition: 0.2s;
+		}
+		img:hover{
+			transform: scale(1.05)
+		}
+
+	}
+	
 	/*BODY CONTI*/
 	h1{
 		color: $theme-dark;
@@ -82,7 +89,7 @@
 	}
 
 	h3{
-		color: $mid-gray;
+		color: $dark-gray;
 		font-weight: 700;
 		font-size: 20px;
 	}
@@ -271,6 +278,7 @@
 
 .NavLinkSel{
 	opacity: 1;
+	color: $theme-dark;
 }
 
 .NavLinkSel::before{
@@ -281,8 +289,6 @@
 	opacity: 1;
 }
 /*NAV END*/
-
-
 
 
 .CoverWrapper{
@@ -319,7 +325,7 @@
 		font-size: 20px;
 		font-weight: 700;
 		margin-top: 50px;
-		opacity: 0.7;
+		opacity: 0.8;
 		span{
 			margin-right: 15px;
 		}
@@ -347,15 +353,24 @@
 
 
 .Footer{
-	background-color: $theme;
 	width: 100vw;
-	height: 70px;
-	color: $dark-gray;
+	margin: auto;
+	margin-top: 100px;
+	padding-bottom: 30px;
+	border-bottom: 10px solid $theme-dark;
 	text-align: center;
-	line-height: 75px;
-	font-size: 18px;
-	font-family: $handwriting;
-	margin-bottom: 0px;
+	color: $light-gray;
+	text-align: center;
+	font-size: 14px;
+}
+
+.Footer::before{
+	display: block;
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+	content: '• • •';
+	color: #6D6D6D;
 }
 
 .ProgressBar{
@@ -369,4 +384,5 @@
 }}
 
 
-@include ProjectTheme('ThemeTeal',$teal,$teal-dark,$teal-light);
+@include ProjectTheme('ThemeYellow',$yellow,$yellow-dark,$yellow-light);
+@include ProjectTheme('ThemeGreen',$green,$green-dark,$green-light);

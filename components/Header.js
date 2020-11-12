@@ -6,12 +6,14 @@ import styles from "../styles/Header.module.scss"
 
 
 export default function Header(props){
-	const navLink=['about','works','blog','fun ツ']
+	const navLink=['about','works','blog','fun']
+	const theme = props.theme?props.theme:'Yellow';
+
 	const [navSel,setnavSel]=useState(props.navLink)
 	return(
-		<div className={styles.Header}>
+		<div className={`${styles.Header} ${styles[`Theme${theme}`]}`}>
 			<div className={styles.Content}>
-				<img className={styles.Logo} src="/images/header-logo.png"/>
+				<div className={styles.Identity}>poobesh</div>
 				<div className={styles.NavList}>
 					{navLink.map(x=>(
 						<nav key={x}>
