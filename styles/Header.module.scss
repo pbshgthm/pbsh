@@ -71,6 +71,14 @@
 
 }
 
+@media only screen and (max-width: 600px){
+	
+.Identity{
+	margin-left: 15px;
+}
+
+}
+
 }}
 
 @include HeaderTheme('ThemeYellow',$yellow-dark);
