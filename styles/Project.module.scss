@@ -115,17 +115,17 @@
 	}
 
 	blockquote{
-		color: $light-gray;
+		color: $darker-gray;
 		margin-left: 0px;
 		padding-left:15px;
 		line-height: 200%;
 		margin-top: 40px;
-		font-style: oblique;
+		font-style: italic;
 		margin-bottom: 40px;
 		border-left: 5px $theme-dark solid;
 
 		p{
-			font-size: 20px;
+			font-size: 24px;
 		}
 	}
 
@@ -252,14 +252,14 @@
 /*NAV BEGIN*/
 .NavBar{
 	position: fixed;
-	top: 300px;
+	top: 250px;
 	left: 50px;
 	opacity: 0;
 	transition: 0.5s;
 	visibility: hidden;
 	transition-delay: visibility 2s;
 	padding-bottom: 20px;
-	border-bottom: 2px solid $theme-dark;
+	border-bottom: 2px solid wavy $theme-dark;
 }
 
 .NavBarShow{
@@ -292,7 +292,7 @@
 
 .NavLinkSel{
 	opacity: 1;
-	font-weight: 600;
+	font-weight: 500;
 	color: $theme-dark;
 }
 
@@ -305,6 +305,74 @@
 	opacity: 1;
 }
 /*NAV END*/
+
+
+/*NAV BEGIN*///////////////////
+/*
+.NavBar{
+	z-index: 4;
+	position: fixed;
+	top: 55px;
+	width: 100vw;
+	background: #ffffff;
+	padding-left: 217px;
+	left: 0px;
+	opacity: 0;
+	transition: 0.5s;
+	visibility: hidden;
+	transition-delay: visibility 2s;
+	padding-bottom: 0px;
+	border-bottom: hidden;
+}
+
+.NavBarShow{
+	visibility: visible;
+	opacity: 1;
+}
+
+.NavLink{
+	display: inline-block;
+	margin-right: 50px;
+	color: $light-gray;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px 0px;
+	transition: 0s;
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+.NavLink::before{
+	content: '';
+	display: block;
+	color: $theme-dark;
+	width: 20px;
+	height: 14px;
+	line-height: 11px;
+	margin-bottom: -20px;
+	margin-left: -20px;
+	margin-right: 10px;
+	visibility: hidden;
+}
+
+.NavLinkSel{
+	opacity: 1;
+	color: $mid-gray;
+	color: $theme-dark;
+	font-weight: 500;
+}
+
+.NavLinkSel::before{
+	visibility: visible;
+}
+
+.NavLink:hover{
+	color: $theme-dark;
+	opacity: 1;
+}
+//*/
+/*NAV END*///////////
+
 
 
 .CoverWrapper{
@@ -361,6 +429,13 @@
 		width: 1000px;
 		background-color: $dark-gray;
 		padding: 30px;
+		margin: auto;
+		margin-top: 50px;
+	}
+	.Cover{
+		width: 1000px;
+		background-color: transparent;
+		padding: 00px;
 		margin: auto;
 		margin-top: 50px;
 	}

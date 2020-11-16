@@ -41,7 +41,7 @@ export default function Project({children,meta}){
 				<div className={`${styles.NavBar} ${currHash!==''?styles.NavBarShow:''}`}>
 					{hashList.map(x=>(
 						<div key={x} className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
-							onClick={()=>goTo(x)}>{x}
+							onClick={()=>goTo(x)}>{x[0]+x.slice(1).toLowerCase()}
 						</div>))}
 				</div>
 				

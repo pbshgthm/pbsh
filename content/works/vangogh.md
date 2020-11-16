@@ -3,7 +3,7 @@ SLUG      : vangogh
 THEME     : Green
 TITLE     : Designing and Building an AI powered search engine for Color Palettes
 DOMAIN    : [UX Design,Fullstack Development,SaaS Management]
-COVER     : vangogh_assets/cover.png
+COVER     : vangogh_assets/cover2.png
 NEXT      : [covidwire,duomoji]
 HASH      : [RESEARCH,PRODUCT,ENGINEERING,DESIGN]
 SUMMARY   :
