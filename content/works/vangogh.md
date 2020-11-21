@@ -23,10 +23,10 @@ SUMMARY   :
 FEATURED  : 
   width    : 700
   content : [
-		[https://www.producthunt.com/posts/vangogh,vangogh_assets/producthunt.png],
-		[https://us12.campaign-archive.com/?u=88328e131c58d0c0995e899eb&id=5d4998f6eb,vangogh_assets/anotherdesignnewsletter.png],
-		[https://prototypr.io/toolbox/vangogh/,vangogh_assets/prototypr.png]
-	]
+    [https://www.producthunt.com/posts/vangogh,vangogh_assets/producthunt.png],
+    [https://us12.campaign-archive.com/?u=88328e131c58d0c0995e899eb&id=5d4998f6eb,vangogh_assets/anotherdesignnewsletter.png],
+    [https://prototypr.io/toolbox/vangogh/,vangogh_assets/prototypr.png]
+  ]
 ---
 
 # Product

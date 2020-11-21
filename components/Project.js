@@ -5,7 +5,6 @@ import {animateScroll as scroll} from 'react-scroll';
 
 
 function goTo(hash){
-	console.log(hash)
 	const pos = document.getElementById(hash).offsetTop-140;
 	scroll.scrollTo(pos,{
 		smooth: 'easeInOut'
@@ -18,9 +17,8 @@ export default function Project({children,meta}){
 	const [currHash,setCurrHash]=useState('')
 	const hashList=['Summary'].concat(meta.HASH)
 	const [progress,setProgress]=useState(0)
-	console.log(meta)
+	
 	useEffect(()=>{
-		console.log(meta.FEATURED)
 		window.addEventListener('scroll', ()=>{
 			const curr = document.documentElement.scrollTop
 			const progress = (document.documentElement.scrollTop + document.body.scrollTop) /(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;

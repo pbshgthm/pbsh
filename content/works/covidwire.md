@@ -20,11 +20,11 @@ SUMMARY   :
 FEATURED  : 
   width    : 900
   content : [
-		[https://abx.xyz,covidwire_assets/hindu.png],
-		[https://abx.xyz,covidwire_assets/toi.png],
-		[https://abx.xyz,covidwire_assets/iiith.png],
-		[https://abx.xyz,covidwire_assets/twn.png],
-		[https://abx.xyz,covidwire_assets/suntv.png]
+    [https://abx.xyz,covidwire_assets/hindu.png],
+    [https://abx.xyz,covidwire_assets/toi.png],
+    [https://abx.xyz,covidwire_assets/iiith.png],
+    [https://abx.xyz,covidwire_assets/twn.png],
+    [https://abx.xyz,covidwire_assets/suntv.png]
 	]
 ---
 
