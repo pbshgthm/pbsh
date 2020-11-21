@@ -14,7 +14,7 @@ export default function Works({ source, frontMatter }){
 	
 	const content = hydrate(source, { components })
 	return(
-		<Layout title={ frontMatter.SLUG.charAt(0).toUpperCase() + frontMatter.SLUG.slice(1) + ' • Poobesh Gowtham'}>
+		<Layout title={ frontMatter.NAME + ' • Poobesh'}>
 			<Header navLink='works' theme={frontMatter.THEME}/>
 			<Project meta={frontMatter}>{content}</Project>
 		</Layout>
@@ -33,6 +33,7 @@ export async function getStaticPaths() {
 		paths: [
 			{ params: { slug: 'sample' } },
 			{ params: { slug: 'vangogh' } },
+			{ params: { slug: 'covidwire' } },
 		],
 		fallback: false
 	};

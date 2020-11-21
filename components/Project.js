@@ -5,6 +5,7 @@ import {animateScroll as scroll} from 'react-scroll';
 
 
 function goTo(hash){
+	console.log(hash)
 	const pos = document.getElementById(hash).offsetTop-140;
 	scroll.scrollTo(pos,{
 		smooth: 'easeInOut'
@@ -15,10 +16,11 @@ function goTo(hash){
 export default function Project({children,meta}){
 	
 	const [currHash,setCurrHash]=useState('')
-	const hashList=['SUMMARY'].concat(meta.HASH)
+	const hashList=['Summary'].concat(meta.HASH)
 	const [progress,setProgress]=useState(0)
-
+	console.log(meta)
 	useEffect(()=>{
+		console.log(meta.FEATURED)
 		window.addEventListener('scroll', ()=>{
 			const curr = document.documentElement.scrollTop
 			const progress = (document.documentElement.scrollTop + document.body.scrollTop) /(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
@@ -33,7 +35,7 @@ export default function Project({children,meta}){
 		})
 	},[])
 	
-
+	
 
 	return(
 			<div className={styles[`Theme${meta.THEME}`]}>
@@ -41,13 +43,13 @@ export default function Project({children,meta}){
 				<div className={`${styles.NavBar} ${currHash!==''?styles.NavBarShow:''}`}>
 					{hashList.map(x=>(
 						<div key={x} className={`${styles.NavLink} ${currHash===x?styles.NavLinkSel:''}`} 
-							onClick={()=>goTo(x)}>{x[0]+x.slice(1).toLowerCase()}
+							onClick={()=>goTo(x)}>{x}
 						</div>))}
 				</div>
 				
 				
 				<div className={styles.CoverWrapper}>
-					<div className={styles.Name}>{meta.SLUG.toUpperCase()}</div>
+					<div className={styles.Name}>{meta.NAME.toUpperCase()}</div>
 					<h1>{meta.TITLE}</h1>
 					<div className={styles.Domain}>
 							{meta.DOMAIN.map(x=>(<span key={x}>{x.toUpperCase()}</span>))}
@@ -60,7 +62,7 @@ export default function Project({children,meta}){
 
 				<div className={styles.BodyContainer}>
 					<div className={styles.Body}>
-						<H1>SUMMARY</H1>
+						<H1>Summary</H1>
 						<div className={styles.Summary}>
 							<div className={styles.SummaryCol}>
 								<div>
@@ -79,10 +81,10 @@ export default function Project({children,meta}){
 						</div>
 						{meta.FEATURED&&<div>
 							<h4 style={{wordSpacing: '10px'}}>Featured 🎉</h4>
-							<div className={styles.FeaturedBox}>
-								{meta.FEATURED.map(x=>
+							<div className={styles.FeaturedBox} style={{width:meta.FEATURED.width+'px'}}>
+								{meta.FEATURED.content.map(x=>
 									(<a href={x[0]} target="_blank" rel="noopener noreferrer">
-										<img style={{width:(730/meta.FEATURED.length-30)+'px'}} src={require(`../content/works/${x[1]}`)}/>
+										<img style={{width:(meta.FEATURED.width/meta.FEATURED.content.length)+'px'}} src={require(`../content/works/${x[1]}`)}/>
 									</a>))
 								}
 							</div>
@@ -142,7 +144,7 @@ const Img=(props)=>{
 	)
 }
 
-const H1=(props)=>(<><Break/><h1 id={props.children}>{props.children}</h1></>);
+const H1=(props)=>(<><Break/><h1 id={props.children}>{props.children.toUpperCase()}</h1></>);
 const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>);
 const Blockquote=(props)=>(<blockquote {...props}/>)
 const Break=(props)=>(<svg className={styles.Break} width="286" height="12" viewBox="0 0 286 12" xmlns="http://www.w3.org/2000/svg">

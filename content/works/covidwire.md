@@ -1,20 +1,31 @@
 ---
-SLUG      : template
-THEME     : Green
-TITLE     : Project Title
-DOMAIN    : [Domain A,Domain B,Domain C]
-COVER     : vangogh_assets/cover.png
-NEXT      : [covidwire,duomoji]
-HASH      : [Section A, Section B]
+NAME      : CovidWire
+THEME     : Orange
+TITLE     : Delivering curated news summaries on Covid 19 in Indian languages
+DOMAIN    : 
+- Product Design
+- Fullstack Development
+- Project Management
+COVER     : covidwire_assets/cover.png
+NEXT      : 
+- covidwire
+- vangogh
+HASH      : 
+- Section A
+- Section B
 SUMMARY   :
 - Challenge  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 - Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 - Team       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-FEATURED  : [
-	[https://www.producthunt.com/posts/vangogh,vangogh_assets/producthunt.png],
-	[https://us12.campaign-archive.com/?u=88328e131c58d0c0995e899eb&id=5d4998f6eb,vangogh_assets/anotherdesignnewsletter.png],
-	[https://prototypr.io/toolbox/vangogh/,vangogh_assets/prototypr.png]
-]
+FEATURED  : 
+  width    : 900
+  content : [
+		[https://abx.xyz,covidwire_assets/hindu.png],
+		[https://abx.xyz,covidwire_assets/toi.png],
+		[https://abx.xyz,covidwire_assets/iiith.png],
+		[https://abx.xyz,covidwire_assets/twn.png],
+		[https://abx.xyz,covidwire_assets/suntv.png]
+	]
 ---
 
 # Section A
@@ -27,7 +38,7 @@ Apparently we had reached a [great height](https://google.com) in the atmosphere
 3.  Looking down into the dark gulf below
 4.  I could see a ruddy light streaming through
 
-![Embedded web view of the CovidWire app](sample_assets/sample1.png)
+![Volunteer's content flow pipeline](covidwire_assets/content-flow.png#large)
 
 # Section B
 ## Section Title (again)
