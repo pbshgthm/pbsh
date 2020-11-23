@@ -31,7 +31,7 @@ export async function getStaticProps({params}) {
 export async function getStaticPaths() {
 	return {
 		paths: [
-			{ params: { slug: 'sample' } },
+			{ params: { slug: 'template' } },
 			{ params: { slug: 'vangogh' } },
 			{ params: { slug: 'covidwire' } },
 		],

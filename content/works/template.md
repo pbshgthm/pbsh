@@ -32,7 +32,7 @@ Apparently we had reached a [great height](https://google.com) in the atmosphere
 3.  Looking down into the dark gulf below
 4.  I could see a ruddy light streaming through
 
-![Embedded web view of the CovidWire app](sample_assets/sample1.png)
+![Embedded web view of the CovidWire app](template_assets/sample1.png)
 
 # Section B
 ## Section Title (again)
@@ -43,7 +43,7 @@ Looking down into the dark gulf below, I could see a ruddy light streaming throu
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
 
-![Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.](sample_assets/sample2.png)
+![Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.](template_assets/sample2.png)
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. 
 
