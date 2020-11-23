@@ -1,20 +1,29 @@
 ---
-SLUG      : template
+NAME      : Template
 THEME     : Green
 TITLE     : Project Title
-DOMAIN    : [Domain A,Domain B,Domain C]
+DOMAIN    : 
+- Domain A
+- Domain B
+- Domain C
 COVER     : vangogh_assets/cover.png
-NEXT      : [covidwire,duomoji]
-HASH      : [Section A, Section B]
+NEXT      : 
+- covidwire
+- duomoji
+HASH      : 
+- Section A
+- Section B
 SUMMARY   :
 - Challenge  : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 - Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 - Team       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-FEATURED  : [
-	[https://www.producthunt.com/posts/vangogh,vangogh_assets/producthunt.png],
-	[https://us12.campaign-archive.com/?u=88328e131c58d0c0995e899eb&id=5d4998f6eb,vangogh_assets/anotherdesignnewsletter.png],
-	[https://prototypr.io/toolbox/vangogh/,vangogh_assets/prototypr.png]
-]
+FEATURED  : 
+  width   : 700
+  content : [
+    [https://www.producthunt.com/posts/vangogh,vangogh_assets/producthunt.png],
+    [https://us12.campaign-archive.com/?u=88328e131c58d0c0995e899eb&id=5d4998f6eb,vangogh_assets/anotherdesignnewsletter.png],
+    [https://prototypr.io/toolbox/vangogh/,vangogh_assets/prototypr.png]
+	]
 ---
 
 # Section A

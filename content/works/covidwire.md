@@ -6,10 +6,6 @@ DOMAIN    :
 - Product Design
 - Fullstack Development
 - Project Management
-COVER     : covidwire_assets/cover.png
-NEXT      : 
-- covidwire
-- vangogh
 HASH      : 
 - Section A
 - Section B
@@ -18,13 +14,13 @@ SUMMARY   :
 - Outcome    : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 - Team       : Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
 FEATURED  : 
-  width    : 900
+  width   : 900
   content : [
-    [https://abx.xyz,covidwire_assets/hindu.png],
-    [https://abx.xyz,covidwire_assets/toi.png],
-    [https://abx.xyz,covidwire_assets/iiith.png],
-    [https://abx.xyz,covidwire_assets/twn.png],
-    [https://abx.xyz,covidwire_assets/suntv.png]
+    [https://abx.xyz,hindu.png],
+    [https://abx.xyz,toi.png],
+    [https://abx.xyz,iiith.png],
+    [https://abx.xyz,twn.png],
+    [https://abx.xyz,suntv.png]
 	]
 ---
 
@@ -45,13 +41,19 @@ Apparently we had reached a [great height](https://google.com) in the atmosphere
 
 Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
+![twinkle.](covidwire_assets/architecture.png#large)
+
 ### Section Sub title
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
 
-![Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.](sample_assets/sample2.png)
+![Beta version](covidwire_assets/beta.png#big)
 
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. 
+
+
+
+![twinkle.](covidwire_assets/design-lang.png)
 
 #### Blockquote
 
@@ -60,3 +62,5 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 - Looking down into the dark gulf below
 - I could see a ruddy light streaming through
 - Sable cloud beneath was dished out
+
+![twinkle.](covidwire_assets/components.png#large)
