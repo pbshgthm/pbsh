@@ -1,67 +1,86 @@
 @use "base" as *;
 
+
 .Header{
 	width: 100vw;
 	position: fixed;
 	background: #ffffff;
-	box-shadow: 0px 1px 4px rgba(188, 188, 188, 0.25);
-	height: 65px;
+	height: 60px;
 	top: 0px;
 	z-index: 3;
 }
+
 .Content{
 	width: 1000px;
 	margin: auto;
-	padding-top: 12px;
+	padding-top: 10px;
 }
-.Title{
-	font-family: $primary-font;
-	font-style: italic;
-	color: $gray-dark;
-	font-size: 18px;;
-	width: 400px;
-	text-align: center;
-	position: absolute;
-	margin-left: 300px;
-	margin-top: 10px;
-	
-}
-.Logo{
+
+
+@mixin HeaderTheme($theme-name,$theme) {
+.#{$theme-name}{
+
+.Identity{
+	font-size: 24px;
+	color: $mid-gray;
+	font-family: $handwriting;
 	float: left;
-	height: 45px;
+	height: 40px;
+	line-height: 43px;
 }
+
+.Identity::after{
+	content: '●';
+	color: $theme;
+	margin-left: 3px;
+	font-size: 15px;
+}
+
 .NavList{
 	float: right;
+
 	nav{
 		display: inline-block;
+		margin-left: 30px;
+		cursor: pointer;
+		line-height: 40px;
+		position: relative;
+		color: $mid-gray;
 	}
-}
-.NavLink{
-	font-family: $secondary-font;
-	display: inline-block;
-	color: $gray-mid;
-	width: 70px;
-	font-size: 16px;
-	line-height: 45px;
-	text-align: center;
-	cursor: pointer;
-	text-decoration: none;
 
-	width: auto;
-	margin-left: 30px;
-}
-.NavLink:hover{
-	color: $accent-dark;
-}
-.NavLinkSel{
-	color: $accent-dark;
-	font-weight: 500;
-}
-.NavSelbar{
-	width: 70px;
-	height: 5px;
-	background-color: $accent-light;
-	transition: 0s;
+	nav:last-of-type::after{
+		content: ' ツ'
+	}
 
-	display: none;
+	a{
+		color: $mid-gray;
+		text-decoration: none;
+	}
+
+	.NavSel::after{
+		content: '•';
+		color: $theme;
+		font-size: 24px;
+		display: inline-block;
+		position: absolute;
+		bottom: -17px;
+		left: 0;
+		text-align: center;
+		width: 100%;
+	}
+
 }
+
+@media only screen and (max-width: 600px){
+	
+.Identity{
+	margin-left: 15px;
+}
+
+}
+
+}}
+
+@include HeaderTheme('ThemeYellow',$yellow-dark);
+@include HeaderTheme('ThemeGreen',$green-dark);
+@include HeaderTheme('ThemeOrange',$orange-dark);

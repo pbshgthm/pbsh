@@ -1,24 +1,29 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import Header from '../components/Header'
+import Layout from '../components/Layout'
+
+import styles from '../styles/Project.module.scss'
 
 export default function Home() {
   return (
-    <ul>
-      <li>
+    <Layout title="about">
+			<Header navLink="about"/>
+		 	<ul>
+				<li>
+					<Link href="/works/covidwire">
+						<div className="">
+						</div>
+					</Link>
+      	</li>
+			</ul>
+		</Layout>
+  )
+}
+
+
+			<li>
         <Link href="/works/covidwire">
           <a>covidwire</a>
         </Link>
       </li>
-      <li>
-        <Link href="/works/vangogh">
-          <a>vangogh</a>
-        </Link>
-      </li>
-			<li>
-        <Link href="/works/sample">
-          <a>sample</a>
-        </Link>
-      </li>
-    </ul>
-  )
-}
+
