@@ -27,7 +27,10 @@ export default function Works({works}) {
 									<h2>{x.TITLE}</h2>
 									<p>{x.TITLE}</p>	
 									<Link href={`/works/${x.NAME.toLowerCase()}`}><a>
-										<div className={styles.WorkLink}>view project</div>
+										<div className={styles.WorkLink}>read more</div>
+									</a></Link>
+									<Link href={`/works/${x.NAME.toLowerCase()}`}><a>
+										<div className={styles.WorkLinkSec}>live site ></div>
 									</a></Link>
 									<img className={styles.WorkRef} src={require(`../../content/works/${x.NAME.toLowerCase()}_assets/work-ref.png`)}/>				
 								</div>

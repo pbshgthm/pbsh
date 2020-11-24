@@ -19,7 +19,7 @@ FEATURED  :
     [https://google.com,producthunt.png],
     [https://google.com,anotherdesignnewsletter.png],
     [https://google.com,prototypr.png]
-	]
+  ]
 ---
 
 # Section A

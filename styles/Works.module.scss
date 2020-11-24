@@ -2,7 +2,7 @@
 
 .WorkList{
 	margin-top: 100px;
-	margin-bottom: 200px;
+	margin-bottom: 50px;
 }
 
 .WorkBox{
@@ -14,8 +14,11 @@
 
 .WorkImg{
 	width: 45vw;
+	transition: 0.5s;
 }
-
+.WorkImg:hover{
+	transform: scale(1.02);
+}
 .WorkDescContainer{
 	float: left;
 	width: 45vw;
@@ -99,7 +102,7 @@
 	
 .WorkLink{
 	display: inline-block;
-	margin-top: 25px;
+	margin-top: 20px;
 	margin-bottom: 25px;
 	color: #575757;
 	font-size: 16px;
@@ -110,13 +113,34 @@
 	border-radius: 20px;
 	border: 0px solid $theme-dark;
 	box-shadow: 0px 0px 0px 0px #F1F1F1;
-	transition: 0.5s;
+	transition: 0.2s;
 }	
+
+
 
 .WorkLink:hover{
 	transform: scale(1.05)
 }
 
+.WorkLinkSec{
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	color: #575757;
+	font-size: 16px;
+	padding: 0px 15px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	border: 0px solid $theme-dark;
+	box-shadow: 0px 0px 0px 0px #F1F1F1;
+	transition: 0.2s;
+}	
+
+.WorkLinkSec:hover{
+	text-decoration: underline;
+}
 
 }}
 

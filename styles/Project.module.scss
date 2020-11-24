@@ -11,11 +11,18 @@
 	background: $theme-light;
 }
 
-.Break {
+.BreakX {
 	margin-top: 60px;
 	display: block;
 	margin-bottom: 65px;
 	fill: $theme-dark;
+}
+
+
+.Break::after {
+	content: '. . .';
+	font-size: 38px;
+	color:$theme-dark;
 }
 
 .BodyContainer{
