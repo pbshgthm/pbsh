@@ -1,5 +1,49 @@
 @use "base" as *;
 
+.NextBtn{
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	width: 150px;
+	margin-left: calc(50vw - 75px);
+	z-index: 6;
+	font-size: 16px;
+	text-align: center;
+	color: $light-gray;
+	transition: 0.3s;
+	cursor: pointer;
+	background: #ffffff;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+}
+.NextBtn:hover{
+	opacity: 1;
+}
+.Anchors{
+	position: fixed;
+	top: 40vh;
+	padding-left: 20px;
+}
+.AnchorPoint{
+	display: block;
+	width: 8px;
+	height: 8px;
+	background: #BBB;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.AnchorSel{
+	transform: scale(2);
+}
+.AnchorPoint:hover{
+	transform: scale(2);
+}
+
 .WorkList{
 	margin-top: 100px;
 	margin-bottom: 50px;
@@ -100,6 +144,10 @@
 @mixin ProjectTheme($theme-name,$theme,$theme-dark,$theme-light) {
 .#{$theme-name}{
 
+.AnchorPoint{
+	background: $theme-dark;
+}
+
 h2{
 	background: linear-gradient(180deg, #fff 60%, $theme 60%, $theme 110%, #fff 110%);
 	background-repeat: no-repeat;
@@ -154,6 +202,7 @@ h2{
 }
 
 }}
+
 
 @include ProjectTheme('ThemeBlue', $blue, $blue-dark, $blue-light);
 @include ProjectTheme('ThemeOrange', $orange, $orange-dark, $orange-light);
