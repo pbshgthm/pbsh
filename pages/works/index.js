@@ -20,7 +20,7 @@ function goTo(hash){
 
 export default function Works({works}) {
 	const [currHover,setCurrHover]=useState('')
-	const [currHash,setCurrHash]=useState('')
+	const [currHash,setCurrHash]=useState(works[0].SLUG)
 	const hashList=works.map(x=>x.SLUG)
 	
 	useEffect(()=>{
