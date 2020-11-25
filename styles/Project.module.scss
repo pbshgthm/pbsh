@@ -97,6 +97,10 @@
 		border-left: 60px $theme-dark solid;
 	}
 
+			
+			
+
+
 	h2{
 		color: $dark-gray;
 		font-size: 36px;
@@ -140,27 +144,15 @@
 
 		p{
 			font-size: 24px;
-			
-			font-size: 28px;
-			color: $theme-dark;
+			color: $mid-gray;
+			font-style: normal;
+			display: inline;
+			background: linear-gradient(180deg, #fff 60%, $theme 60%, $theme 110%, #fff 110%);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			text-decoration: none;
 		}
 	}
-	/*
-	blockquote::before{
-		content: '';
-		display: block;
-		width: 100px;
-		height: 10px;
-		border-top: 3px solid #DCDCDC;
-	}
-	blockquote::after{
-		content: '';
-		display: block;
-		width: 300px;
-		height: 20px;
-		border-top: 3px solid #DCDCDC;
-	}
-	*/
 
 	p{
 		margin-top: 10px;
@@ -773,6 +765,6 @@
 }}
 
 
-@include ProjectTheme('ThemeYellow',$yellow,$yellow-dark,$yellow-light);
+@include ProjectTheme('ThemeBlue',$blue,$blue-dark,$blue-light);
 @include ProjectTheme('ThemeOrange',$orange,$orange-dark,$orange-light);
 @include ProjectTheme('ThemeGreen',$green,$green-dark,$green-light);

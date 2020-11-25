@@ -1,4 +1,5 @@
 ---
+SLUG      : template
 NAME      : Template
 THEME     : Green
 TITLE     : Project Title

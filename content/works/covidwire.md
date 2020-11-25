@@ -1,4 +1,5 @@
 ---
+SLUG      : covidwire
 NAME      : CovidWire
 THEME     : Orange
 TITLE     : Delivering curated news summaries on Covid 19 in Indian languages

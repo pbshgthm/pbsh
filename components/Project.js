@@ -53,7 +53,7 @@ export default function Project({children,meta}){
 							{meta.DOMAIN.map(x=>(<span key={x}>{x.toUpperCase()}</span>))}
 					</div>
 					<div className={styles.Cover}>
-						<Img src={`${meta.NAME.toLowerCase()}_assets/cover.png#cover`} alt=""/>
+						<Img src={`${meta.SLUG}_assets/cover.png#cover`} alt=""/>
 					</div>
 				</div>
 
@@ -82,7 +82,7 @@ export default function Project({children,meta}){
 							<div className={styles.FeaturedBox} style={{width:meta.FEATURED.width+'px'}}>
 								{meta.FEATURED.content.map(x=>
 									(<a href={x[0]} target="_blank" rel="noopener noreferrer">
-										<img style={{width:(meta.FEATURED.width/meta.FEATURED.content.length)+'px'}} src={require(`../content/works/${meta.NAME.toLowerCase()}_assets/${x[1]}`)}/>
+										<img style={{width:(meta.FEATURED.width/meta.FEATURED.content.length)+'px'}} src={require(`../content/works/${meta.SLUG}_assets/${x[1]}`)}/>
 									</a>))
 								}
 							</div>
