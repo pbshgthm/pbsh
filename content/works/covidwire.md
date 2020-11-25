@@ -1,4 +1,5 @@
 ---
+SLUG      : covidwire
 NAME      : CovidWire
 THEME     : Orange
 TITLE     : Delivering curated news summaries on Covid 19 in Indian languages
@@ -21,7 +22,7 @@ FEATURED  :
     [https://abx.xyz,iiith.png],
     [https://abx.xyz,twn.png],
     [https://abx.xyz,suntv.png]
-	]
+  ]
 ---
 
 # Section A
@@ -37,7 +38,12 @@ Apparently we had reached a [great height](https://google.com) in the atmosphere
 ![Volunteer's content flow pipeline](covidwire_assets/content-flow.png#large)
 
 # Section B
+
+![twinkle.](covidwire_assets/problems.png#large)
+
 ## Section Title (again)
+
+![twinkle](covidwire_assets/webapp.png#large)
 
 Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
 
@@ -60,6 +66,13 @@ Apparently we had reached a great height in the atmosphere, for the sky was a de
 - Apparently we had reached a great height
 - By the same illusion which lifts the horizon
 - Looking down into the dark gulf below
+
+![twinkle.](covidwire_assets/blueprint.png#big)
+
+
+
+## something else
+
 - I could see a ruddy light streaming through
 - Sable cloud beneath was dished out
 

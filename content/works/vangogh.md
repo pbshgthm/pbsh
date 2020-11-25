@@ -1,4 +1,5 @@
 ---
+SLUG      : vangogh
 NAME      : Vangogh
 THEME     : Green
 TITLE     : Designing and Building an AI Powered Search Engine for Color Palettes

@@ -1,4 +1,5 @@
 ---
+SLUG      : template
 NAME      : Template
 THEME     : Green
 TITLE     : Project Title
@@ -19,7 +20,7 @@ FEATURED  :
     [https://google.com,producthunt.png],
     [https://google.com,anotherdesignnewsletter.png],
     [https://google.com,prototypr.png]
-	]
+  ]
 ---
 
 # Section A
