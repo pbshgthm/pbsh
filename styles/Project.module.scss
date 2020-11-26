@@ -764,7 +764,7 @@
 
 }}
 
-
+@include ProjectTheme('ThemeRed', $red,$red-dark,$red-light);
 @include ProjectTheme('ThemeBlue',$blue,$blue-dark,$blue-light);
-@include ProjectTheme('ThemeOrange',$orange,$orange-dark,$orange-light);
+@include ProjectTheme('ThemeYellow',$yellow,$yellow-dark,$yellow-light);
 @include ProjectTheme('ThemeGreen',$green,$green-dark,$green-light);

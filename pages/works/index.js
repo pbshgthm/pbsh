@@ -39,7 +39,6 @@ export default function Works({works}) {
 	return (
     <Layout title="Works ~ Poobesh">
 			<Header navLink="works"/>
-			<div className={styles.NextBtn}>next project</div>
 			<div className={styles.Anchors}>
 				{works.map(x=>(
 					<div className={styles[`Theme${x.THEME}`]} onClick={()=>goTo(x.SLUG)}>
@@ -63,7 +62,7 @@ export default function Works({works}) {
 									</Link>	
 									<p>{x.TITLE}</p>
 									<Link href={`/works/${x.SLUG}`}>
-										<a onMouseEnter={()=>setCurrHover(x.SLUG)} onMouseLeave={()=>setCurrHover('')} className={styles.WorkLink}>read more</a>
+										<a onMouseEnter={()=>setCurrHover(x.SLUG)} onMouseLeave={()=>setCurrHover('')} className={styles.WorkLink}><img src="images/lock.png"/> read more</a>
 									</Link>
 									<Link href={`/works/${x.SLUG}`}>
 										<a className={styles.WorkLinkSec}>live site ></a>
@@ -80,7 +79,7 @@ export default function Works({works}) {
 }
 
 export async function getStaticProps() {
-	const workList=['covidwire','vangogh','mosaic']
+	const workList=['covidwire','vangogh','mosaic','raven']
 	const works=workList.map(x=>matter.read(join(`content/works/${x}.md`)).data)
 	return { props: { works: works } }
 }

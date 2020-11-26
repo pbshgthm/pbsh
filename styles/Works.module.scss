@@ -28,14 +28,15 @@
 }
 .AnchorPoint{
 	display: block;
-	width: 8px;
-	height: 8px;
+	width: 6px;
+	height: 6px;
 	background: #BBB;
 	border-radius: 5px;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	cursor: pointer;
 	transition: 0.2s;
+	filter: grayscale(0);
 }
 .AnchorSel{
 	transform: scale(2);
@@ -173,6 +174,11 @@ h2{
 	border: 0px solid $theme-dark;
 	box-shadow: 0px 0px 0px 0px #F1F1F1;
 	transition: 0.2s;
+
+	img{
+		width: 20px;
+		vertical-align: middle;
+	}
 }	
 
 
@@ -204,6 +210,7 @@ h2{
 }}
 
 
+@include ProjectTheme('ThemeRed', $red, $red-dark, $red-light);
 @include ProjectTheme('ThemeBlue', $blue, $blue-dark, $blue-light);
-@include ProjectTheme('ThemeOrange', $orange, $orange-dark, $orange-light);
+@include ProjectTheme('ThemeYellow', $yellow, $yellow-dark, $yellow-light);
 @include ProjectTheme('ThemeGreen', $green, $green-dark, $green-light);

@@ -1,7 +1,7 @@
 ---
 SLUG      : covidwire
 NAME      : CovidWire
-THEME     : Orange
+THEME     : Yellow
 TITLE     : Delivering curated news summaries on Covid 19 in Indian languages
 DOMAIN    : 
 - Product Design
