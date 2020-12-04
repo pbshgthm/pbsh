@@ -21,6 +21,7 @@
 .#{$theme-name}{
 
 .Identity{
+	display: none;
 	font-size: 24px;
 	color: $mid-gray;
 	font-family: $handwriting;
@@ -29,6 +30,9 @@
 	line-height: 43px;
 }
 
+.Logo{
+	width: 90px;
+}
 .Identity::after{
 	content: '●';
 	color: $theme;
@@ -81,7 +85,8 @@
 
 }}
 
+
+@include HeaderTheme('ThemeRed', $red-dark);
 @include HeaderTheme('ThemeBlue',$blue-dark);
 @include HeaderTheme('ThemeYellow',$yellow-dark);
 @include HeaderTheme('ThemeGreen',$green-dark);
-@include HeaderTheme('ThemeOrange',$orange-dark);

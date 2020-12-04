@@ -1,26 +1,6 @@
 @use "base" as *;
 
-.NextBtn{
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	width: 150px;
-	margin-left: calc(50vw - 75px);
-	z-index: 6;
-	font-size: 16px;
-	text-align: center;
-	color: $light-gray;
-	transition: 0.3s;
-	cursor: pointer;
-	background: #ffffff;
-	height: 40px;
-	line-height: 40px;
-	border-radius: 20px;
-	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
-}
-.NextBtn:hover{
-	opacity: 1;
-}
+
 .Anchors{
 	position: fixed;
 	top: 40vh;
@@ -31,17 +11,21 @@
 	width: 8px;
 	height: 8px;
 	background: #BBB;
-	border-radius: 5px;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	cursor: pointer;
 	transition: 0.2s;
+	opacity: 0.5;
+	border: 4px solid #fff;
+	border-radius: 8px;
 }
 .AnchorSel{
-	transform: scale(2);
+	transition: 0.2s;
+	opacity: 1;
+	transform: scale(1.5);
 }
 .AnchorPoint:hover{
-	transform: scale(2);
+	transform: scale(1.5);
 }
 
 .WorkList{
@@ -144,7 +128,7 @@
 @mixin ProjectTheme($theme-name,$theme,$theme-dark,$theme-light) {
 .#{$theme-name}{
 
-.AnchorPoint{
+.AnchorSel{
 	background: $theme-dark;
 }
 
@@ -175,6 +159,12 @@ h2{
 	transition: 0.2s;
 }	
 
+.WorkLinkStale{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 16px;
+	color: $theme-dark;
+}
 
 
 .WorkLink:hover{
@@ -204,6 +194,7 @@ h2{
 }}
 
 
+@include ProjectTheme('ThemeRed', $red, $red-dark, $red-light);
 @include ProjectTheme('ThemeBlue', $blue, $blue-dark, $blue-light);
-@include ProjectTheme('ThemeOrange', $orange, $orange-dark, $orange-light);
+@include ProjectTheme('ThemeYellow', $yellow, $yellow-dark, $yellow-light);
 @include ProjectTheme('ThemeGreen', $green, $green-dark, $green-light);
