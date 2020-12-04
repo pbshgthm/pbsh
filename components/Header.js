@@ -8,9 +8,9 @@ import styles from "../styles/Header.module.scss"
 export default function Header(props){
 	const navLink={
 		'about':'/',
-		'works':'works',
-		'blog':'soon',
-		'fun':'soon'
+		'works':'/works',
+		'blog':'/soon',
+		'fun':'/soon'
 	}
 	const theme = props.theme?props.theme:'Yellow';
 
