@@ -25,7 +25,7 @@ import styles from "../styles/About.module.scss"
 				<Link href={'/works'}>
 					<a className={styles.WorksLink}>view works</a>
 				</Link>
-				<a className={styles.WorkLinkSec} href={'/'}>résumé →</a>
+				<a className={styles.WorkLinkSec}target="_blank" rel="noopener noreferrer" href={'/Poobesh_resume.pdf'}>résumé →</a>
 
 				<div className={styles.SayHi}>
 					<span>Say Hi!</span>
