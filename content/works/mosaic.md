@@ -1,10 +1,10 @@
 ---
 SLUG      : mosaic
 NAME      : Microsoft Mosaic
-THEME     : Red
+THEME     : Blue
 TITLE     : Reimagining remote visual collaborative brainstorming on Microsoft Teams
-DOMAIN    : 
-- Product Design
-- Fullstack Development
-- Project Management
+DESC      : Conceptulised and prototyped a brainstorming canvas as part of the next-gen productivity toolset.
+ACTIONS   :
+- PROJECT UNDER NDA UNTIL LAUNCH 
+URL       : https://covidwire.in
 ---

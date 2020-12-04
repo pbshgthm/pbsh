@@ -8,21 +8,24 @@
 }
 .AnchorPoint{
 	display: block;
-	width: 6px;
-	height: 6px;
+	width: 8px;
+	height: 8px;
 	background: #BBB;
-	border-radius: 5px;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	cursor: pointer;
 	transition: 0.2s;
-	filter: grayscale(0);
+	opacity: 0.5;
+	border: 4px solid #fff;
+	border-radius: 8px;
 }
 .AnchorSel{
-	transform: scale(2);
+	transition: 0.2s;
+	opacity: 1;
+	transform: scale(1.5);
 }
 .AnchorPoint:hover{
-	transform: scale(2);
+	transform: scale(1.5);
 }
 
 .WorkList{
@@ -125,7 +128,7 @@
 @mixin ProjectTheme($theme-name,$theme,$theme-dark,$theme-light) {
 .#{$theme-name}{
 
-.AnchorPoint{
+.AnchorSel{
 	background: $theme-dark;
 }
 
@@ -154,13 +157,14 @@ h2{
 	border: 0px solid $theme-dark;
 	box-shadow: 0px 0px 0px 0px #F1F1F1;
 	transition: 0.2s;
-
-	img{
-		width: 20px;
-		vertical-align: middle;
-	}
 }	
 
+.WorkLinkStale{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 16px;
+	color: $theme-dark;
+}
 
 
 .WorkLink:hover{

@@ -21,6 +21,7 @@
 .#{$theme-name}{
 
 .Identity{
+	display: none;
 	font-size: 24px;
 	color: $mid-gray;
 	font-family: $handwriting;
@@ -29,6 +30,9 @@
 	line-height: 43px;
 }
 
+.Logo{
+	width: 90px;
+}
 .Identity::after{
 	content: '●';
 	color: $theme;

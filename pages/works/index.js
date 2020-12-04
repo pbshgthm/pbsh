@@ -18,22 +18,25 @@ function goTo(hash){
 	);
 }
 
+
+
 export default function Works({works}) {
 	const [currHover,setCurrHover]=useState('')
 	const [currHash,setCurrHash]=useState(works[0].SLUG)
 	const hashList=works.map(x=>x.SLUG)
 	
-	useEffect(()=>{
-		window.addEventListener('scroll', ()=>{
-			const curr = document.documentElement.scrollTop
-			
-			const sortedHash = hashList.map(x=>(
-				[x,curr-document.getElementById(x).offsetTop+251]
-			)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
+	function handleScroll(){
+		const curr = document.documentElement.scrollTop	
+		const sortedHash = hashList.map(x=>(
+			[x,curr-document.getElementById(x).offsetTop+271]
+		)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
 
-			if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
-			else setCurrHash(hashList[0])
-		})
+		if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
+		else setCurrHash(hashList[0])
+	}
+	useEffect(()=>{
+		window.addEventListener('scroll',handleScroll)
+		return () => window.removeEventListener('scroll',handleScroll);
 	},[])
 
 	return (
@@ -48,7 +51,7 @@ export default function Works({works}) {
 			<div className={styles.WorkList}>
 				{
 					works.map((x,i)=>(
-						<div id={x.SLUG} className={`${styles.WorkBox} ${styles[`Theme${x.THEME}`]}`}>
+						<div key={x.SLUG} id={x.SLUG} className={`${styles.WorkBox} ${styles[`Theme${x.THEME}`]}`}>
 							{
 							//<Link href={`/works/${x.SLUG}`}><a>
 								<img className={styles.WorkImg} style={{float:i%2==0?'right':'left'}} src={require(`../../content/works/${x.SLUG}_assets/thumbnail.png`)} onMouseEnter={()=>setCurrHover('x.NAME')} onMouseLeave={()=>setCurrHover('')}/>
@@ -57,16 +60,20 @@ export default function Works({works}) {
 							<div className={styles.WorkDescContainer}>
 								<div className={styles.WorkDesc}>
 									<h1>{x.NAME.toUpperCase()}</h1><br/>
-									<Link href={`/works/${x.SLUG}`}>
-										<a><h2 onMouseEnter={()=>setCurrHover(x.SLUG)} onMouseLeave={()=>setCurrHover('')} className={x.SLUG===currHover?styles.h2Hover:''}>{x.TITLE}</h2></a>
+									<Link href={`/works/${(x.ACTIONS[0]==='read more')?x.SLUG:`#${x.SLUG}`}`}>
+										<a><h2 onMouseEnter={()=>(x.ACTIONS[0]==='read more')?setCurrHover(x.SLUG):''} onMouseLeave={()=>setCurrHover('')} className={x.SLUG===currHover?styles.h2Hover:''}>{x.TITLE}</h2></a>
 									</Link>	
-									<p>{x.TITLE}</p>
-									<Link href={`/works/${x.SLUG}`}>
-										<a onMouseEnter={()=>setCurrHover(x.SLUG)} onMouseLeave={()=>setCurrHover('')} className={styles.WorkLink}><img src="images/lock.png"/> read more</a>
-									</Link>
-									<Link href={`/works/${x.SLUG}`}>
-										<a className={styles.WorkLinkSec}>live site ></a>
-									</Link>
+									<p>{x.DESC}</p>
+
+									{x.ACTIONS[0]==='read more'?
+											<Link href={`/works/${x.SLUG}`}>
+											<a onMouseEnter={()=>setCurrHover(x.SLUG)} onMouseLeave={()=>setCurrHover('')} className={styles.WorkLink}>{x.ACTIONS[0]}</a>
+											</Link>:
+											<div className={styles.WorkLinkStale}>{x.ACTIONS[0]}</div>	
+									}
+									{x.ACTIONS.slice(-1)[0]==='live site'?
+										<a className={styles.WorkLinkSec} href={x.URL}>live site →</a>:''
+									}
 									<img className={styles.WorkRef} src={require(`../../content/works/${x.SLUG}_assets/work-ref.png`)}/>	
 								</div>
 							</div>
@@ -79,7 +86,7 @@ export default function Works({works}) {
 }
 
 export async function getStaticProps() {
-	const workList=['covidwire','vangogh','mosaic','raven']
+	const workList=['covidwire','vangogh','mosaic','hotbox']
 	const works=workList.map(x=>matter.read(join(`content/works/${x}.md`)).data)
 	return { props: { works: works } }
 }

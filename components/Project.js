@@ -2,6 +2,7 @@ import styles from '../styles/Project.module.scss'
 import {useState,useEffect,useRef} from 'react'
 import Link from 'next/link'
 import {animateScroll as scroll} from 'react-scroll';
+import Image from 'next/image'
 
 
 function goTo(hash){
@@ -15,22 +16,25 @@ function goTo(hash){
 export default function Project({children,meta}){
 	
 	const [currHash,setCurrHash]=useState('')
-	const hashList=['Summary'].concat(meta.HASH)
+	const hashList=['Overview'].concat(meta.HASH)
 	const [progress,setProgress]=useState(0)
 	
-	useEffect(()=>{
-		window.addEventListener('scroll', ()=>{
-			const curr = document.documentElement.scrollTop
-			const progress = (document.documentElement.scrollTop + document.body.scrollTop) /(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+	function handleScroll(){
+		const curr = document.documentElement.scrollTop
+		const progress = (document.documentElement.scrollTop + document.body.scrollTop) /(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
 			
-			setProgress(progress)
-			const sortedHash = hashList.map(x=>(
-				[x,curr-document.getElementById(x).offsetTop+141]
-			)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
+		setProgress(progress)
+		const sortedHash = hashList.map(x=>(
+			[x,curr-document.getElementById(x).offsetTop+251]
+		)).filter(x=>x[1]>0).sort((a,b)=>(a[1]<b[1]?-1:1))
 
-			if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
-			else setCurrHash('')
-		})
+		if(sortedHash.length>0)setCurrHash(sortedHash[0][0])
+		else setCurrHash('')
+	}
+
+	useEffect(()=>{
+		window.addEventListener('scroll',handleScroll);
+		return () => window.removeEventListener('scroll',handleScroll);
 	},[])
 	
 	
@@ -58,9 +62,9 @@ export default function Project({children,meta}){
 				</div>
 
 
-				<div className={styles.BodyContainer}>
+				<div className={styles.BodyContainer} contenteditable="false">
 					<div className={styles.Body}>
-						<H1>Summary</H1>
+						<H1>Overview</H1>
 						<div className={styles.Summary}>
 							<div className={styles.SummaryCol}>
 								<div>
@@ -86,6 +90,12 @@ export default function Project({children,meta}){
 									</a>))
 								}
 							</div>
+						</div>}
+						{meta.URL&&<div>
+							<h4>Live Website 🚀</h4>
+							<a href={meta.URL} target="_blank" rel="noopener noreferrer">
+								<img className={styles.LiveLink} src={require(`../content/works/${meta.SLUG}_assets/website.png`)}/>
+							</a>
 						</div>}
 						{children}
 						<Break/>
@@ -141,6 +151,7 @@ const Img=(props)=>{
 		</div>
 	)
 }
+
 
 const H1=(props)=>(<><Break/><h1 id={props.children}>{props.children.toUpperCase()}</h1></>);
 const Url=(props)=>(<a target="_blank" rel="noopener noreferrer" {...props}/>);
