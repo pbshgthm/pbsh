@@ -7,17 +7,17 @@ DESC : Conducted intensive UX Research and designed a detailed product as part o
 ACTIONS :
 - read more
 DOMAIN : 
+- UX Research
+- User Study
 - Product Design
-- Fullstack Development
-- Project Management
 HASH : 
 - Product
 - Research
 - Design
 SUMMARY :
-- Challenge : How to make good quality, authentic news on COVID19 accessible to the Indian demographic
-- Outcome : We built a web app to deliver curated news in short summaries, translated in native Indian languages and scaled to 2900 daily users. Built a content pipeline to enable 110+ volunteers to work on the news pieces.
-- My Role : Seeded the idea and acted as the Project Lead to set the vision for the Product. Headed a small design team. Responsible for the tech implementation (full stack).
+- Challenge : How could we assist households in organising and planning their meals, thus making the act of cooking easier
+- Outcome : We conducted UX research by conducting contextual interviews, affinity mapping, creating personas and scenarios to design a mobile app to assist with meal planning.
+- My Role : Headed a team of 5 and conducted on-site user interviews and developed the solutions from the insights. Handled the UI design in the later stages. 
 ---
 # Product
 
