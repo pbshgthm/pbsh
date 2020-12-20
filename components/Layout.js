@@ -1,15 +1,19 @@
 import Head from "next/head";
+import Header from './Header'
 
 export default function Layout({children,title}){
 	return(
-		<React.Fragment>
+		<>
 			<Head>
 				<meta charSet="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-				<meta httpEquiv="x-ua-compatible" content="ie=edge" />
+				<meta httpEquiv="x-ua-compatible" content="ie=edge"/>
 				<title>{title}</title>
-				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kalam&display=swap" rel="stylesheet"/>
+				<link rel="preconnect" href="https://fonts.gstatic.com"/> 
+				<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 			</Head>
-			{children}
-		</React.Fragment>)
+			<Header/>
+			<main>{children}</main>
+			<footer className="pb-4 w-full text-center text-gray-500 font-serif text-lg border-theme border-b-8">Handcrafted by Poobesh Gowtham</footer>
+		</>)
 }

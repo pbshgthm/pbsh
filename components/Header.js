@@ -1,36 +1,24 @@
 import Head from "next/head"
 import Link from 'next/link'
-import {useState} from 'react'
-
-import styles from "../styles/Header.module.scss"
-
+import { useRouter } from 'next/router'
 
 export default function Header(props){
-	const navLink={
-		'about':'/',
-		'works':'/works',
-		'blog':'/soon',
-		'fun':'/soon'
-	}
-	const theme = props.theme?props.theme:'Yellow';
-
-	const [navSel,setnavSel]=useState(props.navLink)
+	
+	const links=['','works','fun','blog','photography','bookshelf'];
+	const path = useRouter().pathname.split('/')[1];
+	
 	return(
-		<div className={`${styles.Header} ${styles[`Theme${theme}`]}`}>
-			<div className={styles.Content}>
-				<Link href="/">
-					<a><img className={styles.Logo} src='/images/logo.png'/></a>
-				</Link>
-				<div className={styles.NavList}>
-					{Object.entries(navLink).map(x=>(
-						<nav key={x[0]}>
-							<Link href={x[1]}>
-								<a className={`${(x[0]===navSel?styles.NavSel:'')}`} onClick={()=>setnavSel(x[0])}>{x[0].toUpperCase()}</a>
-							</Link>
-						</nav>
-					))}
-				</div>
-			</div>
-		</div>
+		<header className="w-1000 m-auto py-12">
+			<nav className="w-96 inline-block">
+				{links.map(x=>(
+				<Link key={x} href={`/${x}`}>
+					<a className={`inline-block text-4xl font-serif mr-6 mb-3 ${path===x?'text-theme first-letter':'text-gray-600'}`}>{x===''?'about':x}</a>
+				</Link>))}
+			</nav>
+			<Link href="/">
+				<a className="inline-block text-2xl font-sans text-gray-700 align-top pt-2 float-right">Poobesh Gowtham</a>
+			</Link>
+		</header>
 	)
+
 };
