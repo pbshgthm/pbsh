@@ -1,1 +1,0 @@
-## Personal website built with mdx, nextjs and tailwind
