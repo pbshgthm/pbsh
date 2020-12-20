@@ -27,3 +27,4 @@ Along with the user-facing web app, we also designed and implemented the content
 With the onset of the global pandemic - COVID19, another type of pandemic plagued the world - information. Being a new subject, people were hooked onto learning more about it. It proved to be very tricky, especially in the Indian context, with the advent of fake news, WhatsApp forwards and language barriers among other reasons.
 
 I initiated a volunteer-driven effort, to tackle this and CovidWire was born. We curated local and international news on COVID 19, summarised and translated them and made it accessible through a mobile web app.
+
