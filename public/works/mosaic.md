@@ -1,8 +1,8 @@
 ---
-NAME : CovidWire
-WHAT : Cofounded Volunteer Initiative
-DESC : Curated bite-sized news summaries on Covid-19 in Indian languages
-TAG  : Featured in Hindu, TOI
+NAME : Microsoft Mosaic
+WHAT : Internship Project
+DESC : Visual brainstorming canvas integration for MS Teams 
+TAG  : Fluid Interface Design
 ---
 
 # Product

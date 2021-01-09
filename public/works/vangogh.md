@@ -1,8 +1,8 @@
 ---
-NAME : CovidWire
-WHAT : Cofounded Volunteer Initiative
-DESC : Curated bite-sized news summaries on Covid-19 in Indian languages
-TAG  : Featured in Hindu, TOI
+NAME : Vangogh Search
+WHAT : Indie SaaS Product
+DESC : AI powered search engine for color palettes
+TAG  : "#1 on Product Hunt"
 ---
 
 # Product

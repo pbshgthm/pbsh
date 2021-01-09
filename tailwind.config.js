@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
@@ -15,7 +16,8 @@ module.exports = {
 				theme: {
 					DEFAULT : '#8C9B56',
 					light		: '#BECB92'
-				}
+				},
+				gray: colors.trueGray
     	}
 		},
 		fontFamily: {
@@ -37,23 +39,7 @@ module.exports = {
           },
         }
       }
-
       addUtilities(newUtilities)
-    }),
-		[
-      "@fullhuman/postcss-purgecss",
-      process.env.NODE_ENV === "production"
-        ? {
-            // the paths to all template files
-            content: [
-              "./pages/**/*.{js,jsx,ts,tsx}",
-              "./components/**/*.{js,jsx,ts,tsx}",
-            ],
-            // function used to extract class names from the templates
-            defaultExtractor: (content) =>
-              content.match(/[\w-/:]+(?<!:)/g) || [],
-          }
-        : false,
-    ],
+    })
   ],
 }
