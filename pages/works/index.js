@@ -21,16 +21,18 @@ export default function WorksPage({worksList}) {
 	
 	return (
     <Layout title="Works ~ Poobesh">
-			<div className="w-1000 m-auto mt-12">
+			<div className="w-wide m-auto mt-8">
 				<div className="grid grid-cols-3 -mx-8">
 					{worksList.map(proj=>(
-						<div className="w-72 mx-8 mb-20">
-							<Image src={`/works/assets/${proj.SLUG}/thumbnail.png`} width="288" height="288" className="rounded-lg bg-gradient-to-tr from-gray-900 to-gray-600"/>
-							<h3 className="text-2xl text-gray-600 font-medium mt-2 font-serif">{proj.NAME}</h3>
-							<p className="text-sm text-theme mt-1">{proj.WHAT}</p>
-							<p className="text-gray-500 mt-4">{proj.DESC}</p>
-							<p className="text-sm text-gray-400 mt-2">{proj.TAG}</p>
-						</div>
+						<Link href={`works/${proj.SLUG}`}>
+							<a className="w-72 mx-8 mb-20 group">
+								<Image src={`/works/assets/${proj.SLUG}/thumbnail.png`} width="288" height="288" className="rounded-lg bg-gradient-to-tr from-gray-900 to-gray-600 group-hover:from-gray-700 group-hover:to-gray-500 group-hover:scale-105"/>
+								<h3 className="text-2xl text-gray-600 font-medium mt-2 font-serif">{proj.NAME}</h3>
+								<p className="text-sm text-theme mt-1">{proj.WHAT}</p>
+								<p className="text-gray-500 mt-4">{proj.DESC}</p>
+								<p className="text-sm text-gray-400 mt-2">{proj.TAG}</p>
+							</a>
+						</Link>
 					))}
 				</div>
 			</div>

@@ -9,8 +9,8 @@ module.exports = {
   theme: {
 		extend: {
 			spacing: {
-				'1000': '1000px',
-				'700' : '700px'
+				'wide': '1024px',
+				'norm' : '680px'
 			},
 			colors: {
 				theme: {
@@ -27,7 +27,7 @@ module.exports = {
   },
   variants: {
 		extend:{
-			
+			gradientColorStops: ['group-hover']
 		}
   },
   plugins: [
