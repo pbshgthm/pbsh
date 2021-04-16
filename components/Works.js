@@ -2,7 +2,7 @@ import {useState,useEffect,useRef} from 'react'
 import Link from 'next/link'
 import {animateScroll as scroll} from 'react-scroll';
 import Image from 'next/image'
-import {ProgressRing} from './utilities';
+import {ProgressRing} from './Utilities';
 
 function goTo(hash){
 	const pos=getScrollPos(hash)-60;
