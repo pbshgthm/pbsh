@@ -14,17 +14,16 @@ export default function WorksPage({ contentStr, meta}){
 	const content = hydrate(contentStr, { components })
 	return(
 		<Layout title={ meta.NAME + ' • Poobesh'}>
-			<div className="w-wide m-auto text-gray-400">
-				<Link href="/works"><a>« all works</a></Link>
+			<div className="w-wide m-auto text-gray-400 select-none">
+				<Link href="/works"><a className="hover:text-theme">« all works</a></Link>
 				<span className="float-right">
-					<Link href="/works"><a className="mr-4">← previous</a></Link>|
-					<Link href="/works"><a className="ml-4">next →</a></Link>
+					<Link href="/works"><a className="mr-4 hover:text-theme">← previous</a></Link>|
+					<Link href="/works"><a className="ml-4 hover:text-theme">next →</a></Link>
 				</span>
 			</div>
 			<Works meta={meta}>{content}</Works>
 		</Layout>
 	)
-	
 }
 
 export async function getStaticProps({params}) {

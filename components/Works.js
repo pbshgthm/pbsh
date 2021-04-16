@@ -44,7 +44,9 @@ export default function Works({children,meta}){
 						<h1 className="py-6 text-5xl font-sans font-medium text-theme">
 							{meta.NAME.toUpperCase()}
 						</h1>
-						<h2 className="py-6 m-auto text-5xl font-serif text-gray-700 w-3/4">{meta.DESC}</h2>
+						<h2 className="py-6 m-auto text-5xl font-serif text-gray-700 w-3/4">		
+							{meta.DESC}
+						</h2>
 						<Image src={`/works/assets/${meta.SLUG}/cover.png`} width="1024" height="650" />
 					</section>
 					<section className="m-auto w-norm relative">
@@ -53,9 +55,13 @@ export default function Works({children,meta}){
 				</article>
 				
 				<ProgressRing/>
-				<aside className={`fixed top-64 left-8 font-serif text-gray-400 text-lg border-b-2 border-t-2 py-4 border-gray-300 transition ${currHash?'visible opacity-1':'opacity-0 invisible'}`}>
+				<aside className={`select-none fixed top-56 left-4 font-serif text-gray-400 text-md transition ${currHash?'visible opacity-1':'opacity-0 invisible'}`}>
+					<div className="ml-5 mb-6 font-sans text-theme border-b-2 border-gray-200">{meta.NAME}</div>
 					{meta.HASH.map(x=>(
-						<div key={x} className={`my-2 cursor-pointer transition hover:text-theme ${x===currHash?'text-theme':''}`} onClick={()=>goTo(x)}>{x}</div>
+						<div key={x} className={`my-3 cursor-pointer hover:text-theme ${x===currHash?'text-theme':''}`} onClick={()=>goTo(x)}>
+							<span className={` mr-2 ${x===currHash?'visible':'invisible'}`}>▰</span>
+							{x}
+						</div>
 					))}
 				</aside>
 			</>
@@ -63,7 +69,7 @@ export default function Works({children,meta}){
 }
 
 
-//CUSTOM MDX COMPONENTS ///////////////////////////////
+// CUSTOM MDX COMPONENTS ///////////////////////////////
 
 var isObject = function(a) {
     return (!!a) && (a.constructor === Object);
@@ -71,7 +77,7 @@ var isObject = function(a) {
 
 const heading1 = (props)=>(
 	<h1 id={props.children} className="text-left text-2xl font-bold text-theme mt-20 mb-4 -ml-16">
-		☷☷&nbsp;&nbsp;&nbsp;{props.children.toUpperCase()}
+		▰▰▰&nbsp;&nbsp;&nbsp;{props.children.toUpperCase()}
 	</h1>)
 
 const heading2 = (props)=>(

@@ -1,4 +1,4 @@
-import Head from "next/head"
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import { useRouter } from 'next/router'
@@ -9,7 +9,7 @@ export default function Header(props){
 	const path = useRouter().pathname.split('/')[1];
 	
 	return(
-		<header className="w-wide m-auto py-12">
+		<header className="w-wide m-auto py-12 select-none">
 			<nav className="w-96 inline-block">
 				{links.map((x,i)=>(
 				<React.Fragment key={x}>
