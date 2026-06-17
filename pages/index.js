@@ -30,7 +30,7 @@ import styles from "../styles/About.module.scss"
 				<div className={styles.SayHi}>
 					<span>Say Hi!</span>
 					<a href="https://twitter.com/pbshgthm" target="_blank" rel="noopener noreferrer"><img src={'images/twitter.png'}/>@pbshgthm</a>
-					<a href="mailto:hey@poobesh.io" target="_blank" rel="noopener noreferrer"><img src={'images/email.png'}/>hey@poobesh.io</a>
+					<a href="mailto:hey@poobesh.g@gmail.com" target="_blank" rel="noopener noreferrer"><img src={'images/email.png'}/>poobesh.g@gmail.com</a>
 				</div>
 				<img src='images/previous.png' className={styles.Previous}/>
 			</div>
